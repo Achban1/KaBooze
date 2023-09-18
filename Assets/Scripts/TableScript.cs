@@ -7,6 +7,7 @@ public class TableScript : MonoBehaviour
     
     public GameObject AngryBum;
     public float bumCount;
+    public float bumTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,17 @@ public class TableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (bumTimer < 20)
         
+        {
+            bumTimer += Time.deltaTime;
+        }
+        
+        else
+        {
+            bumCount = 0;
+            bumTimer = 0;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

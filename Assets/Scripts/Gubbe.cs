@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarMan : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public Rigidbody2D Barman;
     
