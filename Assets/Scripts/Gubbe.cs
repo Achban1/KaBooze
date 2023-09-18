@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HoppeGubben : MonoBehaviour
+public class BarMan : MonoBehaviour
 {
-    public Rigidbody2D hoppeGubben;
+    public Rigidbody2D Barman;
     Rigidbody2D Gubben;
-    public float heroSpeed = 10f;
+    public float heroSpeed = 0.001f;
     Vector2 position = Vector2.zero;
-    public float radius = 3;
+    Vector2 rawInput;
+    Vector2 velocity;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +21,15 @@ public class HoppeGubben : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        position.x += Input.GetAxis("Horizontal") * heroSpeed * Time.deltaTime;
-        position.y += Input.GetAxis("Vertical") * heroSpeed * Time.deltaTime;
+        rawInput.x = Input.GetAxisRaw("Horizontal");
+        rawInput.y = Input.GetAxisRaw("Vertical");
+        if (rawInput.sqrMagnitude > 1)
+        {
+            rawInput.Normalize();
+        }
+
+        velocity = rawInput * (heroSpeed * Time.deltaTime);
+        position += velocity;
 
         transform.position = position;
     }

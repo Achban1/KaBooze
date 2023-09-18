@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 460661298}
   - component: {fileID: 460661297}
   - component: {fileID: 460661296}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bord (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 1085574827}
   - component: {fileID: 1085574826}
   - component: {fileID: 1085574825}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bord (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1085,7 @@ GameObject:
   - component: {fileID: 1579374762}
   - component: {fileID: 1579374761}
   - component: {fileID: 1579374760}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bord (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1242,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1266,9 +1266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4041d69fa415f3448f0412306fd4bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoppeGubben: {fileID: 1734428469}
+  Barman: {fileID: 1734428469}
   heroSpeed: 5
-  radius: 3
 --- !u!212 &1734428471
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1336,8 +1335,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1734428473
-CapsuleCollider2D:
+--- !u!61 &1734428473
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1369,8 +1368,18 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
   m_Size: {x: 1, y: 2}
-  m_Direction: 0
+  m_EdgeRadius: 0
 --- !u!1 &1868299202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1392,7 @@ GameObject:
   - component: {fileID: 1868299204}
   - component: {fileID: 1868299203}
   - component: {fileID: 1868299206}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1517,7 +1526,7 @@ GameObject:
   - component: {fileID: 1959069143}
   - component: {fileID: 1959069142}
   - component: {fileID: 1959069141}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bord (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
