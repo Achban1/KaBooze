@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TableScript : MonoBehaviour
 {
+    
     public GameObject AngryBum;
+    public float bumCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +21,10 @@ public class TableScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Change to playerLayer
-        if (collision.gameObject.layer == 3) 
+        if (collision.gameObject.layer == 3 && bumCount < 2) 
         {
-            Instantiate(AngryBum, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);            
+            Instantiate(AngryBum, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+            bumCount++;
         }
     }
 }

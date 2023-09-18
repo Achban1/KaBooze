@@ -6,6 +6,8 @@ public class AngryBumScript : MonoBehaviour
 {
     public float speed = 3;
     public GameObject AngryBum;
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] spriteList;  
 
     Transform target;
     Rigidbody2D rb2D;
@@ -15,6 +17,7 @@ public class AngryBumScript : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb2D = GetComponent<Rigidbody2D>();
+        changeSprite();
     }
 
     // Update is called once per frame
@@ -29,6 +32,11 @@ public class AngryBumScript : MonoBehaviour
 
         transform.right = direction;
 
+    }
+    void changeSprite()
+    {
+        int newSprite = Random.Range(0, 4); 
+        spriteRenderer.sprite = spriteList[newSprite];
     }
 }
   

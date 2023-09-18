@@ -5,7 +5,7 @@ using UnityEngine;
 public class BarMan : MonoBehaviour
 {
     public Rigidbody2D Barman;
-    Rigidbody2D Gubben;
+    
     public float heroSpeed = 5f;
    
     Vector2 rawInput;
@@ -15,16 +15,15 @@ public class BarMan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Gubben = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         rawInput.x = Input.GetAxisRaw("Horizontal");
         rawInput.y = Input.GetAxisRaw("Vertical");
+
         if (rawInput.sqrMagnitude > 1)
         {
             rawInput.Normalize();
@@ -32,6 +31,5 @@ public class BarMan : MonoBehaviour
 
         velocity = rawInput * (heroSpeed * Time.deltaTime);
         transform.position += velocity;
-
     }
 }
