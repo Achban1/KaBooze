@@ -17,8 +17,7 @@ public class TableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bumTimer < 20)
-        
+        if (bumTimer < 20)        
         {
             bumTimer += Time.deltaTime;
         }
