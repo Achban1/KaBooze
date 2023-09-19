@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D Barman;
     public PlayerHealthScript health;
     public SpriteRenderer spriteRenderer;
-
+    
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
     public GameObject dyingPlayer;
@@ -35,9 +35,11 @@ public class Player : MonoBehaviour
         {
             rawInput.Normalize();
         }
-
-        velocity = rawInput * (heroSpeed * Time.deltaTime);
-        transform.position += velocity;
+        if (playerIsAlive )
+        {
+            velocity = rawInput * (heroSpeed * Time.deltaTime);
+            transform.position += velocity;
+        }
 
         if (health._currentHealth <= 0 && playerIsAlive)
         {
