@@ -50,5 +50,13 @@ public class Player : MonoBehaviour
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
         }
+        if (collision.gameObject.layer == 9)
+        {
+            Debug.Log("Damage Taken");
+            health.PlayerDamage(10);
+        }
+        spriteRenderer.color = Color.red;
+        //Damadge both Bums
+        Invoke("BackToWhite", 0.3f);
     }
 }
