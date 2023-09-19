@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ui
   - Health
+  - Furniture
+  - Bum
   layers:
   - Default
   - TransparentFX
