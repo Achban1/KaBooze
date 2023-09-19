@@ -5,11 +5,13 @@ using UnityEngine;
 public class bartenderThrow : MonoBehaviour
 {
     public GameObject MolotovPrefab;
-    float timer;
+    float timer = 0.0f;
     float rageTimer;
     float fireRate;
+
     public Transform playerPos;
     public bool Mode;
+
 
 
 
@@ -23,26 +25,32 @@ public class bartenderThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //normal - ´rawand was here
         if (Mode == false)
         {
-            fireRate = 2;
+            fireRate = 1.2f;
         }
 
-        if (rageTimer > 10)
+        if (rageTimer > 20)
         {
-            Mode = true;
+            //for (float i = 0; i < 5; i += Time.deltaTime)
+            //{
+            //    Debug.Log(i);
+            //}
 
-            fireRate = 0.2f;
-            if (rageTimer > 11)
+            fireRate = 100f;
+            Debug.Log("Reloading!");
+            if (rageTimer > 10)
             {
-                rageTimer = 0;
+                Rage();
+                
             }
+
             
         }
 
 
-
+        
         if (timer > fireRate)
         {
 
@@ -53,5 +61,27 @@ public class bartenderThrow : MonoBehaviour
         timer += Time.deltaTime;
         rageTimer += Time.deltaTime;
 
+
+    }
+
+    private void Reload()
+    {
+        
+        for (float i = 0; i < 5; i += 1f * Time.deltaTime) 
+        { 
+            Debug.Log(i);
+        }
+
+    }
+    void Rage ()
+    {
+        Mode = true;
+        fireRate = 0.05f;
+        if (rageTimer > 25)
+        {
+            Mode = false;
+            rageTimer = 0;
+            Reload();
+        }
     }
 }

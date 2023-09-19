@@ -32,20 +32,23 @@ public class Molotov : MonoBehaviour
 
         
         Camera cam = Camera.main;
-
         height = cam.orthographicSize;
         width = height * cam.aspect;
-
-
         randomDestination = new Vector2(Random.Range(-width, width), Random.Range(-height, height));
 
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
+
+        if (randomDestination.sqrMagnitude < 16)
+        {
+            Destroy(gameObject);
+        }
+        
+
     }
 
     void Update()
     {
-        
-        
+
        if (Mode.Mode == true)
        {
             Rage();
@@ -62,18 +65,16 @@ public class Molotov : MonoBehaviour
     {
 
         Vector2 direction = randomDestination - transform.position;
-        rb20.velocity = direction.normalized;
-
-        if (rb20.velocity.sqrMagnitude != randomDestination.sqrMagnitude)
+        
+        if (transform.position.sqrMagnitude <= direction.sqrMagnitude)
         {
             rb20.velocity = direction * speed;
         }
 
-
-        if (transform.position.sqrMagnitude >= randomDestination.sqrMagnitude)
+        if (transform.position.sqrMagnitude > randomDestination.sqrMagnitude)
         {
             Destroy(gameObject);
-            Instantiate(GlassArea, transform.position, transform.rotation);
+            Instantiate(GlassArea, transform.position, transform.rotation);           
         }
     }
 
@@ -87,27 +88,13 @@ public class Molotov : MonoBehaviour
         {
             rb20.velocity = direction * speed;
         }
-        
-        
-
 
         if (transform.position == savedPlayerPos)
         {
-            
             Destroy(gameObject);
             Instantiate(GlassArea, transform.position, transform.rotation);
 
         }
-
-
-        //if (transform.position.magnitude - savedPlayerPos.magnitude < 0)
-        //{
-
-        //    Debug.Log("Hit");
-        //    Destroy(gameObject);
-
-        //}
-        
 
 
     }
