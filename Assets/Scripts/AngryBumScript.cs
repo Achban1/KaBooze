@@ -43,9 +43,10 @@ public class AngryBumScript : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == 9)
         {
-            //Damadge player
+            transform.rotation = Quaternion.Euler(-45, 0, 0);
+            Destroy(gameObject, 1);
         }
         if (collision.gameObject.layer == 6)
         {
