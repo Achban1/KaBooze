@@ -7,7 +7,7 @@ public class AngryBumScript : MonoBehaviour
 {
     public float speed = 3;
     public int bumHealth = 2;
-    public GameObject AngryBum;
+    //public GameObject AngryBum;
     public SpriteRenderer spriteRenderer;
     //public Sprite[] spriteList;  
 

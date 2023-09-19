@@ -7,9 +7,9 @@ public class PlayerHealthScript : MonoBehaviour
 
     [SerializeField] private float _maxHealth = 100;
     [SerializeField] private GameObject _deathEffect, _hitEffect;
-    private float _currentHealth;
+    public float _currentHealth;
 
-    [SerializeField] private HealtbarScript _healthbar;
+    [SerializeField] public HealthbarScript _healthbar;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,11 @@ public class PlayerHealthScript : MonoBehaviour
         _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
     }
 
+    [ContextMenu("DamagePlayer")]
+    public void PlayerDamage()
+    {
+        _currentHealth -= 5;
+    }
     void OnMouseDown()
     {
         _currentHealth -= 10;
@@ -30,7 +35,7 @@ public class PlayerHealthScript : MonoBehaviour
         else
         {
             _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
-            Instantiate(_hitEffect, transform.position, Quaternion.identity);
+            //Instantiate(_hitEffect, transform.position, Quaternion.identity);
         }
     }
 }

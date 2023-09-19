@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealtbarScript : MonoBehaviour
+public class HealthbarScript : MonoBehaviour
 {
     [SerializeField] private Image _Healthbar;
 
