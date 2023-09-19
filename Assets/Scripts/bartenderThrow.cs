@@ -8,8 +8,10 @@ public class bartenderThrow : MonoBehaviour
     float timer;
     float rageTimer;
     float fireRate;
+    float reload;
     public Transform playerPos;
     public bool Mode;
+
 
 
 
@@ -23,26 +25,19 @@ public class bartenderThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //normal - ´rawand was here
         if (Mode == false)
         {
-            fireRate = 2;
+            fireRate = 1.2f;
         }
 
-        if (rageTimer > 10)
+        if (rageTimer > 20)
         {
-            Mode = true;
-
-            fireRate = 0.2f;
-            if (rageTimer > 11)
-            {
-                rageTimer = 0;
-            }
-            
+            Rage();
         }
 
 
-
+        
         if (timer > fireRate)
         {
 
@@ -52,6 +47,23 @@ public class bartenderThrow : MonoBehaviour
 
         timer += Time.deltaTime;
         rageTimer += Time.deltaTime;
+        reload += Time.deltaTime;
 
+    }
+
+    private void Reset()
+    {
+        
+    }
+    void Rage ()
+    {
+        Mode = true;
+        fireRate = 0.01f;
+        if (rageTimer > 25)
+        {
+            Mode = false;
+            rageTimer = 0;
+
+        }
     }
 }
