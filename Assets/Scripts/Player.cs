@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public Rigidbody2D Barman;
     public PlayerHealthScript health;
+    public SpriteRenderer spriteRenderer;
 
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
@@ -49,14 +50,22 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
+            spriteRenderer.color = Color.red;
+            //Damadge both Bums
+            Invoke("BackToWhite", 0.1f);
         }
         if (collision.gameObject.layer == 9)
         {
             Debug.Log("Damage Taken");
             health.PlayerDamage(10);
+            spriteRenderer.color = Color.red;
+            //Damadge both Bums
+            Invoke("BackToWhite", 0.1f);
         }
-        spriteRenderer.color = Color.red;
-        //Damadge both Bums
-        Invoke("BackToWhite", 0.3f);
+    }
+    private void BackToWhite()
+    {
+        spriteRenderer.color = Color.white;
     }
 }
+
