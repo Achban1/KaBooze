@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 1319337600}
   m_Layer: 0
   m_Name: Bartender
-  m_TagString: Untagged
+  m_TagString: Bartender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1344,7 +1344,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MolotovPrefab: {fileID: 8218120330404435621, guid: 2e0c26344c9c9b547b18b63c1ffbe10d, type: 3}
-  fireRate: 0
   playerPos: {fileID: 0}
   Mode: 0
 --- !u!1 &1471071774

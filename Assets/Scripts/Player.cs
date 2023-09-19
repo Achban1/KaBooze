@@ -35,9 +35,11 @@ public class Player : MonoBehaviour
         {
             rawInput.Normalize();
         }
-
-        velocity = rawInput * (heroSpeed * Time.deltaTime);
-        transform.position += velocity;
+        if (playerIsAlive )
+        {
+            velocity = rawInput * (heroSpeed * Time.deltaTime);
+            transform.position += velocity;
+        }
 
         if (health._currentHealth <= 0 && playerIsAlive)
         {
