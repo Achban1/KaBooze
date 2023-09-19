@@ -1667,6 +1667,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1734428471}
   playerIsAlive: 1
   heroSpeed: 5
+  dyingPlayer: {fileID: 1189631224469876272, guid: 3af746249ebf8104881b5fa4f885991a, type: 3}
 --- !u!212 &1734428471
 SpriteRenderer:
   m_ObjectHideFlags: 0
