@@ -14,12 +14,14 @@ public class AngryBumScript : MonoBehaviour
     Transform target;
     Rigidbody2D rb2D;
 
+
     // Start is called before the first frame update
     void Start()
     {
         bumHealth =+ Random.Range(0,4);
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb2D = GetComponent<Rigidbody2D>();
+
        // changeSprite();
     }
 
@@ -45,7 +47,7 @@ public class AngryBumScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 9)
         {
-            transform.rotation = Quaternion.Euler(-45, 0, 0);
+            transform.rotation = Quaternion.Euler(-90, 0, 0);
             Destroy(gameObject, 1);
         }
         if (collision.gameObject.layer == 6)
