@@ -9,14 +9,17 @@ using static UnityEngine.GraphicsBuffer;
 public class Molotov : MonoBehaviour
 {
 
-    private int speed = 10;
+    private int speed = 2;
     Rigidbody2D rb20;
+
     private float height;
     private float width;
     private Vector3 randomDestination;
+    private Vector3 savedPlayerPos;
+    public GameObject player;
     public Transform playerPos;
     public bool rageMode;
-    Vector3 savedPlayerPos;
+
 
 
     void Start()
@@ -39,8 +42,8 @@ public class Molotov : MonoBehaviour
     void Update()
     {
 
-
         Normal();
+        
 
     }
 
@@ -48,7 +51,7 @@ public class Molotov : MonoBehaviour
     {
 
         Vector2 direction = randomDestination - transform.position;
-        direction.Normalize();
+        rb20.velocity = rb20.velocity.normalized;
 
         if (transform.position != randomDestination)
         {
@@ -68,12 +71,14 @@ public class Molotov : MonoBehaviour
     {
         
         Vector2 direction = savedPlayerPos - transform.position;
-        direction.Normalize();
+        
 
-        if (transform.position != savedPlayerPos)
+        if (rb20.velocity.sqrMagnitude <= direction.sqrMagnitude)
         {
             rb20.velocity = direction * speed;
         }
+        
+        
 
 
         if (transform.position == savedPlayerPos)
@@ -82,9 +87,25 @@ public class Molotov : MonoBehaviour
             Destroy(gameObject);
 
         }
-        Debug.Log(transform.position);
-        Debug.Log(savedPlayerPos);
 
+
+        //if (transform.position.magnitude - savedPlayerPos.magnitude < 0)
+        //{
+
+        //    Debug.Log("Hit");
+        //    Destroy(gameObject);
+
+        //}
+        
+
+
+    }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject == GameObject.FindGameObjectWithTag("Player"))
+        {
+            Destroy(gameObject);
+        }
 
     }
 

@@ -6,13 +6,16 @@ public class bartenderThrow : MonoBehaviour
 {
     public GameObject MolotovPrefab;
     float timer;
-
+    public float fireRate;
     public Transform playerPos;
+    public bool Mode;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Mode = true;
 
     }
 
@@ -20,7 +23,19 @@ public class bartenderThrow : MonoBehaviour
     void Update()
     {
 
-        if (timer > 0.2f)
+        if (Mode)
+        {
+            fireRate = 1;
+        }
+
+        if (Mode == false)
+        {
+            fireRate = 0.2f;
+        }
+
+
+
+        if (timer > fireRate)
         {
 
             Instantiate(MolotovPrefab, transform.position, transform.rotation);
