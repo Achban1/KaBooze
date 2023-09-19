@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
     public GameObject dyingPlayer;
+    
    
     Vector2 rawInput;
     Vector3 velocity;
@@ -58,6 +59,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == 6 && playerIsAlive)
         {
+
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
             spriteRenderer.color = Color.red;
