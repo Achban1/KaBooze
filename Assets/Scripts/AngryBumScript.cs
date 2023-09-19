@@ -50,13 +50,13 @@ public class AngryBumScript : MonoBehaviour
             transform.rotation = Quaternion.Euler(-90, 0, 0);
             Destroy(gameObject, 1);
         }
-        if (collision.gameObject.layer == 6)
-        {
-            spriteRenderer.color = Color.red;
-            //Damadge both Bums
-            Invoke("BackToWhite", 0.3f);
-            bumHealth--;
-        }
+        //if (collision.gameObject.layer == 6)
+        //{
+        //    spriteRenderer.color = Color.red;
+        //    //Damadge both Bums
+        //    Invoke("BackToWhite", 0.3f);
+        //    bumHealth--;
+        //}
     }
     
     //void changeSprite()

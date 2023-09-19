@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D Barman;
     public PlayerHealthScript health;
     public SpriteRenderer spriteRenderer;
-
+    
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
     public GameObject dyingPlayer;

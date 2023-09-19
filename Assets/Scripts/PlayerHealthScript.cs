@@ -8,7 +8,9 @@ public class PlayerHealthScript : MonoBehaviour
     [SerializeField] private float _maxHealth = 100;
     [SerializeField] private GameObject _deathEffect, _hitEffect;
     public float _currentHealth;
-    
+    //Collected cash
+    public float collectedCash = 0;
+
 
     [SerializeField] public HealthbarScript _healthbar;
 
