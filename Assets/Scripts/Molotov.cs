@@ -16,7 +16,6 @@ public class Molotov : MonoBehaviour
     private float width;
     private Vector3 randomDestination;
     private Vector3 savedPlayerPos;
-    public GameObject player;
     public Transform playerPos;
     public bool rageMode;
     public GameObject GlassArea;
