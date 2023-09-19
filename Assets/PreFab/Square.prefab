@@ -172,6 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  bumHealth: 2
-  AngryBum: {fileID: 8528965766251231687}
+  bumHealth: 5
   spriteRenderer: {fileID: 6272746032089223023}

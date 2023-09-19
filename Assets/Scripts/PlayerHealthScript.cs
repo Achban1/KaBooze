@@ -8,6 +8,7 @@ public class PlayerHealthScript : MonoBehaviour
     [SerializeField] private float _maxHealth = 100;
     [SerializeField] private GameObject _deathEffect, _hitEffect;
     public float _currentHealth;
+    
 
     [SerializeField] public HealthbarScript _healthbar;
 
@@ -17,12 +18,12 @@ public class PlayerHealthScript : MonoBehaviour
         _currentHealth = _maxHealth;
 
         _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
-    }
-
-    [ContextMenu("DamagePlayer")]
-    public void PlayerDamage()
+    } 
+    
+    public void PlayerDamage(int DamageDone)
     {
-        _currentHealth -= 5;
+        _currentHealth -= DamageDone;
+        _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
     }
     void OnMouseDown()
     {
