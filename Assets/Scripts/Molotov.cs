@@ -107,6 +107,11 @@ public class Molotov : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (col.gameObject.layer == 7 || col.gameObject.layer == 6)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 }
