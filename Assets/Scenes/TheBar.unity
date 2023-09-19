@@ -209,8 +209,8 @@ GameObject:
   - component: {fileID: 250458903}
   - component: {fileID: 250458902}
   - component: {fileID: 250458904}
-  m_Layer: 0
-  m_Name: Bar (2)
+  m_Layer: 8
+  m_Name: Bardesk 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,8 +340,8 @@ GameObject:
   - component: {fileID: 460661298}
   - component: {fileID: 460661297}
   - component: {fileID: 460661296}
-  m_Layer: 0
-  m_Name: Bord (3)
+  m_Layer: 7
+  m_Name: Table 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 467639722}
   - component: {fileID: 467639723}
   m_Layer: 0
-  m_Name: Baren
+  m_Name: Bardesk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,8 +647,8 @@ GameObject:
   - component: {fileID: 743825218}
   - component: {fileID: 743825217}
   - component: {fileID: 743825219}
-  m_Layer: 0
-  m_Name: Bar
+  m_Layer: 8
+  m_Name: Bardesk 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,8 +777,8 @@ GameObject:
   - component: {fileID: 1011318955}
   - component: {fileID: 1011318954}
   - component: {fileID: 1011318956}
-  m_Layer: 0
-  m_Name: Bar(1)
+  m_Layer: 8
+  m_Name: Bardesk 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,8 +976,8 @@ GameObject:
   - component: {fileID: 1085574827}
   - component: {fileID: 1085574826}
   - component: {fileID: 1085574825}
-  m_Layer: 0
-  m_Name: Bord (4)
+  m_Layer: 7
+  m_Name: Table 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1184,8 +1184,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1280007114}
-  m_Layer: 0
-  m_Name: Mobler
+  m_Layer: 7
+  m_Name: Furniture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,8 +1221,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1319337598}
   - component: {fileID: 1319337597}
+  - component: {fileID: 1319337599}
+  - component: {fileID: 1319337600}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Bartender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1269,8 +1271,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.9528302, g: 0.17990243, b: 0.023970496, a: 1}
+  m_Sprite: {fileID: -1851528168889415161, guid: 046a5a87abbf39b42b374adbbfe146cd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1289,12 +1291,49 @@ Transform:
   m_GameObject: {fileID: 1319337596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0158, y: 3.7949, z: 0}
-  m_LocalScale: {x: 0.96091485, y: 0.2877601, z: 1}
+  m_LocalPosition: {x: -0.01, y: 3.38, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1319337599
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319337596}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b80f605e13cca3e40bf0b78607c20a74, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1319337600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319337596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4df8cab29c132b4aa73fad2f633da04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MolotovPrefab: {fileID: 8218120330404435621, guid: 2e0c26344c9c9b547b18b63c1ffbe10d, type: 3}
+  fireRate: 0
+  playerPos: {fileID: 0}
+  Mode: 0
 --- !u!1 &1471071774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,8 +1463,8 @@ GameObject:
   - component: {fileID: 1579374762}
   - component: {fileID: 1579374761}
   - component: {fileID: 1579374760}
-  m_Layer: 0
-  m_Name: Bord (2)
+  m_Layer: 7
+  m_Name: Table 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1612,6 +1651,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Barman: {fileID: 1734428469}
   health: {fileID: 0}
+  spriteRenderer: {fileID: 1734428471}
+  playerIsAlive: 1
   heroSpeed: 5
 --- !u!212 &1734428471
 SpriteRenderer:
@@ -1675,8 +1716,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.328, y: -0.605, z: 0}
-  m_LocalScale: {x: 7.79, y: 5.079799, z: 10.133992}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 6, y: 5.9999995, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1787,8 +1828,8 @@ GameObject:
   - component: {fileID: 1868299204}
   - component: {fileID: 1868299203}
   - component: {fileID: 1868299206}
-  m_Layer: 0
-  m_Name: Bord
+  m_Layer: 7
+  m_Name: Table 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1923,8 +1964,8 @@ GameObject:
   - component: {fileID: 1959069143}
   - component: {fileID: 1959069142}
   - component: {fileID: 1959069141}
-  m_Layer: 0
-  m_Name: Bord (1)
+  m_Layer: 7
+  m_Name: Table 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
