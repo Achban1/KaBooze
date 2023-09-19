@@ -6,7 +6,8 @@ public class bartenderThrow : MonoBehaviour
 {
     public GameObject MolotovPrefab;
     float timer;
-    public float fireRate;
+    float rageTimer;
+    float fireRate;
     public Transform playerPos;
     public bool Mode;
 
@@ -15,7 +16,7 @@ public class bartenderThrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Mode = true;
+        
 
     }
 
@@ -23,14 +24,21 @@ public class bartenderThrow : MonoBehaviour
     void Update()
     {
 
-        if (Mode)
-        {
-            fireRate = 1;
-        }
-
         if (Mode == false)
         {
+            fireRate = 2;
+        }
+
+        if (rageTimer > 10)
+        {
+            Mode = true;
+
             fireRate = 0.2f;
+            if (rageTimer > 11)
+            {
+                rageTimer = 0;
+            }
+            
         }
 
 
@@ -43,6 +51,7 @@ public class bartenderThrow : MonoBehaviour
         }
 
         timer += Time.deltaTime;
+        rageTimer += Time.deltaTime;
 
     }
 }

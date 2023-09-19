@@ -19,6 +19,8 @@ public class Molotov : MonoBehaviour
     public GameObject player;
     public Transform playerPos;
     public bool rageMode;
+    public GameObject GlassArea;
+    public bartenderThrow Mode;
 
 
 
@@ -37,13 +39,22 @@ public class Molotov : MonoBehaviour
 
         randomDestination = new Vector2(Random.Range(-width, width), Random.Range(-height, height));
 
+        Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
     }
 
     void Update()
     {
-
-        Normal();
         
+        
+       if (Mode.Mode == true)
+       {
+            Rage();
+
+       } 
+       else
+       {
+            Normal();
+       }
 
     }
 
@@ -51,9 +62,9 @@ public class Molotov : MonoBehaviour
     {
 
         Vector2 direction = randomDestination - transform.position;
-        rb20.velocity = rb20.velocity.normalized;
+        rb20.velocity = direction.normalized;
 
-        if (transform.position != randomDestination)
+        if (rb20.velocity.sqrMagnitude != randomDestination.sqrMagnitude)
         {
             rb20.velocity = direction * speed;
         }
@@ -61,9 +72,8 @@ public class Molotov : MonoBehaviour
 
         if (transform.position.sqrMagnitude >= randomDestination.sqrMagnitude)
         {
-            Debug.Log("Hit");
             Destroy(gameObject);
-
+            Instantiate(GlassArea, transform.position, transform.rotation);
         }
     }
 
@@ -83,8 +93,9 @@ public class Molotov : MonoBehaviour
 
         if (transform.position == savedPlayerPos)
         {
-            Debug.Log("Hit");
+            
             Destroy(gameObject);
+            Instantiate(GlassArea, transform.position, transform.rotation);
 
         }
 
