@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
 
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
+    public GameObject dyingPlayer;
    
     Vector2 rawInput;
     Vector3 velocity;
@@ -37,16 +39,22 @@ public class Player : MonoBehaviour
         velocity = rawInput * (heroSpeed * Time.deltaTime);
         transform.position += velocity;
 
-        if (health._currentHealth <= 0)
-        {                
-            Debug.Log("You dead");
+        if (health._currentHealth <= 0 && playerIsAlive)
+        {
+            playerIsAlive = false;
+            Debug.Log("You dead");            
+            Instantiate(dyingPlayer, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        }
+        if (playerIsAlive == false)
+        {
+            spriteRenderer.color = new Color(0,0,0,0);
         }
         
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 6 && playerIsAlive)
         {
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
@@ -54,7 +62,7 @@ public class Player : MonoBehaviour
             //Damadge both Bums
             Invoke("BackToWhite", 0.1f);
         }
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 9 && playerIsAlive)
         {
             Debug.Log("Damage Taken");
             health.PlayerDamage(10);
