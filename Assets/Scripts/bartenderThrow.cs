@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bartenderThrow : MonoBehaviour
 {
+    public GameObject[] GlassBottles;
     public GameObject MolotovPrefab;
     float timer = 0.0f;
     float rageTimer;
@@ -53,8 +54,9 @@ public class bartenderThrow : MonoBehaviour
         
         if (timer > fireRate)
         {
-
-            Instantiate(MolotovPrefab, transform.position, transform.rotation);
+            int randomGlassIndex = Random.Range(0, GlassBottles.Length);
+            GameObject selectedGlassBottle = GlassBottles[randomGlassIndex];
+            Instantiate(selectedGlassBottle, transform.position, transform.rotation);
             timer = 0;
         }
 
