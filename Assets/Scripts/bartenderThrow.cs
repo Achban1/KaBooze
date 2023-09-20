@@ -12,39 +12,43 @@ public class bartenderThrow : MonoBehaviour
 
     public Transform playerPos;
     public bool Mode;
-
-
+    float t;
+    float u;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        t = Random.Range(10, 17);
+        u = 5;
         
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         if (Mode == false)
         {
-            fireRate = 1.2f;
-        }
-
-        if (rageTimer > 20)
-        {
-
-
-            fireRate = 100f;
-            Debug.Log("Reloading!");
-            if (rageTimer > 10)
+            if (u > 4)
             {
-                Rage();
-                
+                fireRate = 1.2f;
+            }
+            else if (u <= 4)
+            {
+                fireRate = 0.1f;
             }
 
-            
+        }
+        
+
+        if (rageTimer > t)
+        {
+            fireRate = 100;
+            if (rageTimer > t + 5)
+            {
+                Rage();
+            }
         }
 
 
@@ -59,28 +63,25 @@ public class bartenderThrow : MonoBehaviour
 
         timer += Time.deltaTime;
         rageTimer += Time.deltaTime;
-
-
-    }
-
-    private void Reload()
-    {
         
-        for (float i = 0; i < 5; i += 1f * Time.deltaTime) 
-        { 
-            Debug.Log(i);
-        }
 
     }
-    void Rage ()
+
+    private IEnumerator WaitAndReload(float seconds)
+    {
+        yield return new WaitForSeconds(Random.Range(1, 3));
+    }
+
+    void Rage()
     {
         Mode = true;
         fireRate = 0.05f;
-        if (rageTimer > 25)
+        if (rageTimer > t + 15)
         {
+            u = Random.Range(1, 10);
             Mode = false;
             rageTimer = 0;
-            Reload();
         }
     }
+
 }

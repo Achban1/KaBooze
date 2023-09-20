@@ -8,7 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Molotov : MonoBehaviour
 {
-    private int speed = 2;
+    private int speed = 4;
     private Rigidbody2D rb20;
     private Vector3 destination;
     public Transform playerPos;
@@ -61,6 +61,8 @@ public class Molotov : MonoBehaviour
         destination = playerPos.position;
     }
 
+
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player") || col.gameObject.layer == 7 || col.gameObject.layer == 6)
@@ -68,4 +70,5 @@ public class Molotov : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
