@@ -15,6 +15,8 @@ public class Molotov : MonoBehaviour
     public bool rageMode;
     public GameObject GlassArea;
     public bartenderThrow Mode;
+    public float rotationSpeed;
+
 
     void Start()
     {
@@ -31,12 +33,23 @@ public class Molotov : MonoBehaviour
             
             SetPlayerDestination();
         }
+
+        if (destination.x > 0)
+        {
+            rotationSpeed -= 250;
+        }
+        else if (destination.x < 0)
+        {
+            rotationSpeed += 250;
+        }
             
     }
 
     void Update()
     {
-        // Move towards the destination
+        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+
+
         Vector2 direction = destination - transform.position;
         rb20.velocity = direction.normalized * speed;
 
@@ -53,7 +66,7 @@ public class Molotov : MonoBehaviour
         Camera cam = Camera.main;
         float height = cam.orthographicSize;
         float width = height * cam.aspect;
-        destination = new Vector2(Random.Range(-width, width), Random.Range(-height, height-2));
+        destination = new Vector2(Random.Range(-width, width), Random.Range(-height, height-3));
     }
 
     private void SetPlayerDestination()

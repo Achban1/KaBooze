@@ -12,15 +12,15 @@ public class bartenderThrow : MonoBehaviour
 
     public Transform playerPos;
     public bool Mode;
-    float t;
-    float u;
+    float ti;
+    float fast;
     private Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {
-        t = Random.Range(10, 17);
-        u = 5;
+        ti = Random.Range(10, 17);
+        fast = 5;
         anim = GetComponent<Animator>();
 
     }
@@ -32,13 +32,13 @@ public class bartenderThrow : MonoBehaviour
         if (Mode == false)
         {
             
-            if (u > 4)
+            if (fast > 4)
             {
                 anim.SetTrigger("TrBartender");
                 fireRate = 0.8f;
                 
             }
-            else if (u <= 4)
+            else if (fast <= 4)
             {
                 anim.SetTrigger("TrBartenderFast");
                 fireRate = 0.1f;
@@ -47,13 +47,13 @@ public class bartenderThrow : MonoBehaviour
         }
         
 
-        if (rageTimer > t)
+        if (rageTimer > ti)
         {
             anim.ResetTrigger("TrBartender");
             anim.ResetTrigger("TrBartenderFast");
             fireRate = 100;
             anim.SetTrigger("TrRummage");
-            if (rageTimer > t + 5)
+            if (rageTimer > ti + 5)
             {
                 anim.ResetTrigger("TrRummage");
                 anim.SetTrigger("TrRampage");
@@ -88,10 +88,10 @@ public class bartenderThrow : MonoBehaviour
         
         Mode = true;
         fireRate = 0.05f;
-        if (rageTimer > t + 15)
+        if (rageTimer > ti + 15)
         {
             
-            u = Random.Range(1, 10);
+            fast = Random.Range(1, 10);
             Mode = false;
             rageTimer = 0;
         }
