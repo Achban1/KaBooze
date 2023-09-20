@@ -12,7 +12,8 @@ public class AngryBumScript : MonoBehaviour
     //public Sprite[] spriteList;  
     public float lastX = 0;
     public float currentX = 0;
-    public float movingX = 0;    
+    public float movingX = 0;
+    public float lastY = 0;
     public float currentY = 0;
     public float movingY = 0;
     public Animator animator;
