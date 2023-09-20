@@ -1000,8 +1000,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1319337598}
   - component: {fileID: 1319337597}
-  - component: {fileID: 1319337599}
   - component: {fileID: 1319337600}
+  - component: {fileID: 1319337601}
   m_Layer: 9
   m_Name: Bartender
   m_TagString: Bartender
@@ -1076,27 +1076,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1319337599
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319337596}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b80f605e13cca3e40bf0b78607c20a74, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1319337600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,6 +1103,27 @@ MonoBehaviour:
   MolotovPrefab: {fileID: 8218120330404435621, guid: 2e0c26344c9c9b547b18b63c1ffbe10d, type: 3}
   playerPos: {fileID: 0}
   Mode: 0
+--- !u!95 &1319337601
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319337596}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b80f605e13cca3e40bf0b78607c20a74, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1471071774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1511,7 @@ MonoBehaviour:
   health: {fileID: 0}
   spriteRenderer: {fileID: 1734428471}
   CameraScript: {fileID: 0}
+  animator: {fileID: 0}
   playerIsAlive: 1
   heroSpeed: 5
   dyingPlayer: {fileID: 1189631224469876272, guid: 3af746249ebf8104881b5fa4f885991a, type: 3}
@@ -2186,7 +2187,7 @@ GameObject:
   - component: {fileID: 1977255726}
   m_Layer: 5
   m_Name: CoinCounterCanvas
-  m_TagString: Untagged
+  m_TagString: CoinCounterCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
