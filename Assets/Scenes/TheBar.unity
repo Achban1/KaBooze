@@ -774,7 +774,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c3353a40d09ac14293ed0e5ced9bbd9, type: 3}
+  m_Script: {fileID: 11500000, guid: e14b6b19ff23e2648ace83fec5fccf2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
@@ -2471,6 +2471,7 @@ MonoBehaviour:
   Barman: {fileID: 1734428469}
   health: {fileID: 0}
   spriteRenderer: {fileID: 1734428471}
+  CameraScript: {fileID: 0}
   playerIsAlive: 1
   heroSpeed: 5
   dyingPlayer: {fileID: 1189631224469876272, guid: 3af746249ebf8104881b5fa4f885991a, type: 3}
