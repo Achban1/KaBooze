@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class Player : MonoBehaviour
 {
@@ -14,9 +15,7 @@ public class Player : MonoBehaviour
     
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
-    public GameObject dyingPlayer;
-    
-    
+    public GameObject dyingPlayer;  
    
     Vector2 rawInput;
     Vector3 velocity;
@@ -34,30 +33,43 @@ public class Player : MonoBehaviour
     {
                         
         rawInput.x = Input.GetAxisRaw("Horizontal");
-        rawInput.y = Input.GetAxisRaw("Vertical");
+        rawInput.y = Input.GetAxisRaw("Vertical");        
+
+        if (rawInput.x != 0)
+        {
+            animator.SetFloat("movingX", rawInput.x);
+            animator.SetFloat("movingY", 0);
+        }
+        else
+        {
+            animator.SetFloat("movingY", rawInput.y);
+            animator.SetFloat("movingX", 0);
+        }
+        if (rawInput.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        if(rawInput.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
 
         if (rawInput.sqrMagnitude > 1)
         {
             rawInput.Normalize();
         }
-        if (playerIsAlive )
+        if (playerIsAlive)
         {
             velocity = rawInput * (heroSpeed * Time.deltaTime);
             transform.position += velocity;
-        }
+        }     
 
         if (health._currentHealth <= 0 && playerIsAlive)
         {
             playerIsAlive = false;
             Debug.Log("You dead");
-            animator.SetBool("alive", false);
-            
-        }
-        if (playerIsAlive == false)
-        {
-            
-        }
-        
+            animator.SetBool("alive", false);            
+        }     
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
