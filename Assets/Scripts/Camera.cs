@@ -14,7 +14,7 @@ public class FPSscript : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
-        if (cameraTransform == null )
+        if (cameraTransform == null)
             cameraTransform = GetComponent<Transform>();
     }
     public void Shake()
@@ -33,7 +33,7 @@ public class FPSscript : MonoBehaviour
         cameraTransform.localPosition = pos;
     }
 
-    private void StopShaking ()
+    private void StopShaking()
     {
         CancelInvoke("StartShaking");
         cameraTransform.localPosition = originalPosition;
