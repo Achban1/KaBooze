@@ -26,7 +26,7 @@ public class bartenderThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //normal - ´rawand was here
+
         if (Mode == false)
         {
             fireRate = 1.2f;
@@ -34,10 +34,7 @@ public class bartenderThrow : MonoBehaviour
 
         if (rageTimer > 20)
         {
-            //for (float i = 0; i < 5; i += Time.deltaTime)
-            //{
-            //    Debug.Log(i);
-            //}
+
 
             fireRate = 100f;
             Debug.Log("Reloading!");

@@ -20,12 +20,18 @@ public class Molotov : MonoBehaviour
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
-
+        Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
         // Set destination based on rage mode
-        if (rageMode)
+        if (Mode.Mode)
+        {
             SetRandomDestination();
-        else
+        }
+        else if (!Mode.Mode)
+        {
+            
             SetPlayerDestination();
+        }
+            
     }
 
     void Update()
