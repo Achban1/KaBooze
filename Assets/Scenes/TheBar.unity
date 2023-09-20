@@ -1511,7 +1511,7 @@ MonoBehaviour:
   health: {fileID: 0}
   spriteRenderer: {fileID: 1734428471}
   CameraScript: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 1734428474}
   playerIsAlive: 1
   heroSpeed: 5
   dyingPlayer: {fileID: 1189631224469876272, guid: 3af746249ebf8104881b5fa4f885991a, type: 3}
