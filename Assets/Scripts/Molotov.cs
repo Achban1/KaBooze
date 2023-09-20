@@ -15,15 +15,16 @@ public class Molotov : MonoBehaviour
     public bool rageMode;
     public GameObject GlassArea;
     public bartenderThrow Mode;
-    public float rotationSpeed;
-
-
+    private float rotationSpeed;
+  
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
-        // Set destination based on rage mode
+
+        
+        // Set destination based on rage modes
         if (Mode.Mode)
         {
             SetRandomDestination();
@@ -42,7 +43,8 @@ public class Molotov : MonoBehaviour
         {
             rotationSpeed += 250;
         }
-            
+        GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+
     }
 
     void Update()
