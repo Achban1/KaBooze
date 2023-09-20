@@ -37,12 +37,18 @@ public class TableScript : MonoBehaviour
             cash += Random.Range(2, 8);
         }
     }
+    private void bumSpawn()
+    {
+        Instantiate(AngryBum, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Change to playerLayer
         if (collision.gameObject.layer == 3 && bumCount < 2) 
         {
-            Instantiate(AngryBum, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+            Invoke("bumSpawn", 1);
             bumCount++;
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();
@@ -56,4 +62,5 @@ public class TableScript : MonoBehaviour
         }
 
     }
+     
 }
