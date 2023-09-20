@@ -53,7 +53,7 @@ public class Molotov : MonoBehaviour
         Camera cam = Camera.main;
         float height = cam.orthographicSize;
         float width = height * cam.aspect;
-        destination = new Vector2(Random.Range(-width, width), Random.Range(-height, height));
+        destination = new Vector2(Random.Range(-width, width), Random.Range(-height, height-2));
     }
 
     private void SetPlayerDestination()
