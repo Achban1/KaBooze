@@ -6,7 +6,7 @@ using UnityEngine;
 public class TableScript : MonoBehaviour
 {
     public PlayerHealthScript health;
-    public GameObject AngryBum;
+    public GameObject [] Mobs;
     public float bumCount;
     public float bumTimer;
     public float cash = 0;
@@ -40,9 +40,12 @@ public class TableScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Change to playerLayer
-        if (collision.gameObject.layer == 3 && bumCount < 2) 
+        if (collision.gameObject.layer == 3 && bumCount < 50) 
         {
-            Instantiate(AngryBum, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+            int selectedMob = Random.Range(0, 5);
+            Debug.Log(selectedMob);
+            GameObject newMob = Mobs[selectedMob];
+            Instantiate (newMob, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
             bumCount++;
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();
