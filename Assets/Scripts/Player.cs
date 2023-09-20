@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public PlayerHealthScript health;
     public SpriteRenderer spriteRenderer;
     public CameraScript CameraScript;
+    public Animator animator;
     
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
@@ -48,12 +49,13 @@ public class Player : MonoBehaviour
         if (health._currentHealth <= 0 && playerIsAlive)
         {
             playerIsAlive = false;
-            Debug.Log("You dead");            
-            Instantiate(dyingPlayer, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+            Debug.Log("You dead");
+            animator.SetBool("alive", false);
+            
         }
         if (playerIsAlive == false)
         {
-            spriteRenderer.color = new Color(0,0,0,0);
+            
         }
         
     }
