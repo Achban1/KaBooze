@@ -14,14 +14,15 @@ public class bartenderThrow : MonoBehaviour
     public bool Mode;
     float t;
     float u;
-
-
+    private Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
         t = Random.Range(10, 17);
         u = 5;
-        
+        anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -30,23 +31,32 @@ public class bartenderThrow : MonoBehaviour
         
         if (Mode == false)
         {
+            
             if (u > 4)
             {
-                fireRate = 1.2f;
+                anim.SetTrigger("TrBartender");
+                fireRate = 0.8f;
+                
             }
             else if (u <= 4)
             {
+                anim.SetTrigger("TrBartenderFast");
                 fireRate = 0.1f;
             }
-
+            
         }
         
 
         if (rageTimer > t)
         {
+            anim.ResetTrigger("TrBartender");
+            anim.ResetTrigger("TrBartenderFast");
             fireRate = 100;
+            anim.SetTrigger("TrRummage");
             if (rageTimer > t + 5)
             {
+                anim.ResetTrigger("TrRummage");
+                anim.SetTrigger("TrRampage");
                 Rage();
             }
         }
@@ -58,6 +68,7 @@ public class bartenderThrow : MonoBehaviour
             int randomGlassIndex = Random.Range(0, GlassBottles.Length);
             GameObject selectedGlassBottle = GlassBottles[randomGlassIndex];
             Instantiate(selectedGlassBottle, transform.position, transform.rotation);
+            
             timer = 0;
         }
 
@@ -74,10 +85,12 @@ public class bartenderThrow : MonoBehaviour
 
     void Rage()
     {
+        
         Mode = true;
         fireRate = 0.05f;
         if (rageTimer > t + 15)
         {
+            
             u = Random.Range(1, 10);
             Mode = false;
             rageTimer = 0;
