@@ -9,8 +9,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D Barman;
     public PlayerHealthScript health;
     public SpriteRenderer spriteRenderer;
-    public Camera Camera;
-
+    public CameraScript CameraScript;
     
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
@@ -25,6 +24,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
+        CameraScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
     }
 
     // Update is called once per frame
@@ -64,8 +64,8 @@ public class Player : MonoBehaviour
 
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
-            spriteRenderer.color = Color.red;
-            //Damadge both Bums
+            spriteRenderer.color = Color.red;            
+            CameraScript.Shake();
             Invoke("BackToWhite", 0.1f);
         }
         if (collision.gameObject.layer == 9 && playerIsAlive)
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
             Debug.Log("Damage Taken");
             health.PlayerDamage(10);
             spriteRenderer.color = Color.red;
-            //Damadge both Bums
+            CameraScript.Shake();
             Invoke("BackToWhite", 0.1f);
         }
     }

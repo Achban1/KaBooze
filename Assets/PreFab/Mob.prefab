@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8279185755979987996}
   - component: {fileID: 4842233286104821434}
   - component: {fileID: 7493694178023471641}
+  - component: {fileID: 2504598326360112497}
   m_Layer: 6
-  m_Name: Square
+  m_Name: Mob
   m_TagString: Bum
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,3 +175,24 @@ MonoBehaviour:
   speed: 3
   bumHealth: 5
   spriteRenderer: {fileID: 6272746032089223023}
+--- !u!95 &2504598326360112497
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8528965766251231687}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
