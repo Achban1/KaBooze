@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: kabooze_explotions_Frame_0
     originalName: 
-    pivot: {x: 0.64391696, y: -0.26804125}
+    pivot: {x: 2.288889, y: -0.4805195}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 337
-      height: 194
+      x: 127
+      y: 180
+      width: 90
+      height: 154
     spriteID: 97c915fc1d3921845aa12e700356e84c
     spriteBone: []
     spriteOutline: []
@@ -138,18 +138,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 127, y: 180}
   - name: kabooze_explotions_Frame_1
     originalName: 
-    pivot: {x: 0.64391696, y: -0.26804125}
+    pivot: {x: 2.10101, y: -0.3988095}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 206
-      width: 337
-      height: 194
+      x: 127
+      y: 4
+      width: 99
+      height: 168
     spriteID: 30be3d12c720e6c41b83dbb7b054aa1e
     spriteBone: []
     spriteOutline: []
@@ -158,18 +158,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 206}
+    uvTransform: {x: 127, y: 4}
   - name: kabooze_explotions_Frame_2
     originalName: 
-    pivot: {x: 0.64391696, y: -0.26804125}
+    pivot: {x: 1.877193, y: -0.3186813}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 408
-      width: 337
-      height: 194
+      y: 201
+      width: 114
+      height: 182
     spriteID: 5a884fe63da02e441ba68d3a47e1870c
     spriteBone: []
     spriteOutline: []
@@ -178,18 +178,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 408}
+    uvTransform: {x: 4, y: 201}
   - name: kabooze_explotions_Frame_3
     originalName: 
-    pivot: {x: 0.64391696, y: -0.26804125}
+    pivot: {x: 1.8782609, y: -0.2857143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 610
-      width: 337
-      height: 194
+      y: 4
+      width: 115
+      height: 189
     spriteID: 7b3424d13520874459dc027acaeb2c9f
     spriteBone: []
     spriteOutline: []
@@ -198,7 +198,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 610}
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -211,34 +211,34 @@ ScriptedImporter:
     - name: kabooze_explotions_Frame_0
       frameIndex: 0
       cellRect:
-        x: 23
-        y: 52
-        width: 337
-        height: 194
+        x: 34
+        y: 74
+        width: 90
+        height: 154
       spriteId: 97c915fc1d3921845aa12e700356e84c
     - name: kabooze_explotions_Frame_1
       frameIndex: 1
       cellRect:
-        x: 23
-        y: 52
-        width: 337
-        height: 194
+        x: 32
+        y: 67
+        width: 99
+        height: 168
       spriteId: 30be3d12c720e6c41b83dbb7b054aa1e
     - name: kabooze_explotions_Frame_2
       frameIndex: 2
       cellRect:
-        x: 23
-        y: 52
-        width: 337
-        height: 194
+        x: 26
+        y: 58
+        width: 114
+        height: 182
       spriteId: 5a884fe63da02e441ba68d3a47e1870c
     - name: kabooze_explotions_Frame_3
       frameIndex: 3
       cellRect:
-        x: 23
-        y: 52
-        width: 337
-        height: 194
+        x: 24
+        y: 54
+        width: 115
+        height: 189
       spriteId: 7b3424d13520874459dc027acaeb2c9f
     linkedCells: []
     parentIndex: -1
