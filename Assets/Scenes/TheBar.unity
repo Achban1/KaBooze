@@ -1844,7 +1844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 0}
-  AngryBum: {fileID: 8528965766251231687, guid: 5ea82022544d4cc45a05c34c5e717f47, type: 3}
+  AngryBum: {fileID: 8528965766251231687, guid: 381332a72162f2841928c514d928a834, type: 3}
   bumCount: 0
   bumTimer: 0
   cash: 0
