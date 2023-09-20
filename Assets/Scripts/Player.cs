@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public PlayerHealthScript health;
     public SpriteRenderer spriteRenderer;
     public Camera Camera;
+
     
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
