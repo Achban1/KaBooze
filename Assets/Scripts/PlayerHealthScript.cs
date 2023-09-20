@@ -10,6 +10,7 @@ public class PlayerHealthScript : MonoBehaviour
     public float _currentHealth;
     //Collected cash
     public float collectedCash = 0;
+    
 
 
     [SerializeField] public HealthbarScript _healthbar;

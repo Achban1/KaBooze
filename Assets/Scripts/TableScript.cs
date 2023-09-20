@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 public class TableScript : MonoBehaviour
@@ -9,11 +10,14 @@ public class TableScript : MonoBehaviour
     public float bumCount;
     public float bumTimer;
     public float cash = 0;
+    public CoinCounterScript CoinCounterScript;
+
     // Start is called before the first frame update
     void Start()
     {
+        CoinCounterScript = GameObject.FindGameObjectWithTag("CoinCounterCanvas").GetComponent<CoinCounterScript>();
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
-        cash += Random.Range(2, 8);
+        cash = 1;
     }
 
     // Update is called once per frame
@@ -40,10 +44,15 @@ public class TableScript : MonoBehaviour
         {
             Instantiate(AngryBum, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
             bumCount++;
+            Debug.Log("CoinCollected");
+            CoinCounterScript.CollectCoin();
         }
         if (collision.gameObject.layer == 3)
         {
             health.collectedCash = health.collectedCash + cash;
+            Debug.Log("CoinCollected");
+            CoinCounterScript.CollectCoin();
+
         }
 
     }

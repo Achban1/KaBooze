@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float heroSpeed = 5f;
     public GameObject dyingPlayer;
     
+    
    
     Vector2 rawInput;
     Vector3 velocity;
