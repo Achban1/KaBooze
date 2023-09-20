@@ -6,7 +6,7 @@ using UnityEngine;
 public class TableScript : MonoBehaviour
 {
     public PlayerHealthScript health;
-    public GameObject AngryBum;
+    public GameObject []AngryBum;
     public float bumCount;
     public float bumTimer;
     public float cash = 0;
@@ -39,7 +39,9 @@ public class TableScript : MonoBehaviour
     }
     private void bumSpawn()
     {
-        Instantiate(AngryBum, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        int randomMob = Random.Range(0, 5);
+        GameObject selectedMob = AngryBum[randomMob];
+        Instantiate(selectedMob, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
     }
 
 
