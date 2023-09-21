@@ -18,7 +18,7 @@ public class AngryBumScript : MonoBehaviour
     public float timer;
     public float tableBumped;
     public bool heTookMyTip = false;
-    public float tableNr;
+    public int tableNr;
     public Vector3 myTable;
     Vector2 direction;
 
@@ -26,7 +26,7 @@ public class AngryBumScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tableScript = GameObject.FindGameObjectWithTag("Furniture").GetComponent<TableScript>();
+        tableScript = GameObject.FindGameObjectsWithTag("Furniture")[tableNr-1].GetComponent<TableScript>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb2D = GetComponent<Rigidbody2D>();
         boxC = GetComponent<BoxCollider2D>();
@@ -51,6 +51,7 @@ public class AngryBumScript : MonoBehaviour
         {
             direction = target.position - transform.position;
             speed = 2;
+            animator.SetBool("still", false);
         }
         else
         {

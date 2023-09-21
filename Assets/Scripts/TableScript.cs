@@ -12,7 +12,7 @@ public class TableScript : MonoBehaviour
     public float bumCount = 1;
     public float bumTimer;
     public float cash = 0;
-    public float ThisTableNr = 0;
+    public int ThisTableNr = 0;
     public float tableBumped = 0;
     Vector3 chair1;
     Vector3 chair2;
@@ -92,22 +92,14 @@ public class TableScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Change to playerLayer
-        if (collision.gameObject.layer == 3) //&& bumCount < 2) 
-        {
-
-            bumCount++;
-            Debug.Log("CoinCollected");
-            CoinCounterScript.CollectCoin();
-        }
+        
         if (collision.gameObject.layer == 3)
         {
+            //Telling AngryBums that someone stole their tip
             tableBumped = ThisTableNr;
             health.collectedCash = health.collectedCash + cash;
             Debug.Log("CoinCollected");
-            CoinCounterScript.CollectCoin();
-            //Telling AngryBums that someone stole their tip
-
+            CoinCounterScript.CollectCoin();  
         }
 
     }
