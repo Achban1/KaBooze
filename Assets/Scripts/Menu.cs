@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     public static bool Paused = false;
     public GameObject PauseMenu;
+    public GameObject MenuMenu;
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +41,9 @@ public class Menu : MonoBehaviour
     {
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
-        Paused = false;        
+        MenuMenu.SetActive(false);
+        Paused = false;
+        
     }
 
     public void Quit()
@@ -50,6 +53,7 @@ public class Menu : MonoBehaviour
 
     public void Pause()
     {
+        MenuMenu.SetActive(true);
         Time.timeScale = 0;
         PauseMenu.SetActive(true);
         Paused = true;
