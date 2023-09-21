@@ -72,7 +72,11 @@ public class Molotov : MonoBehaviour
             Instantiate(GlassArea, new Vector3(transform.position.x, transform.position.y, 1), Quaternion.identity);
             GameObject newExplosion  = Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             Destroy(newExplosion, 0.4f);
+<<<<<<< Updated upstream
             
+=======
+            GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+>>>>>>> Stashed changes
         }
     }
 

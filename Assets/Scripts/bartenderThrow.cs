@@ -6,6 +6,7 @@ public class bartenderThrow : MonoBehaviour
 {
     public GameObject[] GlassBottles;
     public GameObject MolotovPrefab;
+    public GameObject MolotovPrefab2;
     float timer = 0.0f;
     float rageTimer;
     float fireRate;
@@ -78,10 +79,6 @@ public class bartenderThrow : MonoBehaviour
 
     }
 
-    private IEnumerator WaitAndReload(float seconds)
-    {
-        yield return new WaitForSeconds(Random.Range(1, 3));
-    }
 
     void Rage()
     {

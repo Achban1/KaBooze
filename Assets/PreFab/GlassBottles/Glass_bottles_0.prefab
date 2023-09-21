@@ -103,6 +103,7 @@ MonoBehaviour:
   playerPos: {fileID: 0}
   rageMode: 0
   GlassArea: {fileID: 4580866107163104880, guid: 853c27720b68a2c44aaf71c63e63d164, type: 3}
+  Explosion: {fileID: 6097744863651022416, guid: 09d14d7a1bc7582428d80111c38f474e, type: 3}
   Mode: {fileID: 0}
   audioScriptGlassBottle: {fileID: 0}
   typeOfExplosion: {fileID: -547365120, guid: 757b6043c1330a54586a42c67c840302, type: 3}
