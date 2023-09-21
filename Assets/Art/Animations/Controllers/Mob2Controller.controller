@@ -14,6 +14,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: fall
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: still
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3899753439405348539}
   m_Solo: 0
@@ -129,6 +132,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: fall
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: still
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3038090815230783390}
   m_Solo: 0
@@ -157,6 +163,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: fall
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: still
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3038090815230783390}
   m_Solo: 0
@@ -183,7 +192,7 @@ AnimatorStateTransition:
     m_ConditionEvent: movingY
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: fall
+    m_ConditionEvent: still
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 237914586214833509}
@@ -221,6 +230,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: fall
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: still
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
