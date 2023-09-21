@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public CameraScript CameraScript;
     public Animator animator;
-    
+    public AudioScriptPunchSound AudioScriptPunchSound;
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
     public GameObject dyingPlayer;  
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
         CameraScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
+        AudioScriptPunchSound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptPunchSound>();
     }
 
     // Update is called once per frame
@@ -79,6 +80,7 @@ public class Player : MonoBehaviour
 
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
+            AudioScriptPunchSound.PunchSound();
             spriteRenderer.color = Color.red;            
             CameraScript.Shake();
             Invoke("BackToWhite", 0.1f);

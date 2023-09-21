@@ -28,18 +28,6 @@ public class PlayerHealthScript : MonoBehaviour
         _currentHealth -= DamageDone;
         _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
     }
-    void OnMouseDown()
-    {
-        _currentHealth -= 10;
-
-        if (_currentHealth <= 0)
-        {
-            Instantiate(_deathEffect, transform.position,Quaternion.Euler(-90,0,0));
-        }
-        else
-        {
-            _healthbar.UpdateHealthbar(_maxHealth, _currentHealth);
-            //Instantiate(_hitEffect, transform.position, Quaternion.identity);
-        }
-    }
+    
+    
 }
