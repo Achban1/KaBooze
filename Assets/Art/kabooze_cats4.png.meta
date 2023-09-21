@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09e985c760e22ca4ab66d0ee0894f934
+guid: 4fc2964de97994e4cbdf695e00f5791c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,169 +123,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kabooze_cats3_0
+      name: kabooze_cats4_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 4
         y: 0
-        width: 76
-        height: 68
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf602849923cb494aac8b83ff9b92304
-      internalID: 2038688272
+      spriteID: 93576249d99fed949843322d6143a52c
+      internalID: -1269745077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kabooze_cats3_1
+      name: kabooze_cats4_1
       rect:
         serializedVersion: 2
-        x: 108
+        x: 100
         y: 0
-        width: 76
-        height: 68
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4724fd198f6fad341adc4877f5621170
-      internalID: -446685514
+      spriteID: 362c0e0d5c3915945b609d1d460df2fd
+      internalID: -1612782905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kabooze_cats3_2
+      name: kabooze_cats4_2
       rect:
         serializedVersion: 2
-        x: 212
+        x: 196
         y: 0
-        width: 68
-        height: 72
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32eef2b36112a134c8904b77f700752e
-      internalID: 1037819170
+      spriteID: c6eb23b4c3cc8fc4abe4597575649482
+      internalID: 249622501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kabooze_cats3_3
+      name: kabooze_cats4_3
       rect:
         serializedVersion: 2
-        x: 312
+        x: 292
         y: 0
-        width: 64
-        height: 72
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3d76fb40c305e74ab7ae600f54c012b
-      internalID: 826677039
+      spriteID: 5460fe6452cb0474794d9d6a95e4363b
+      internalID: -2043286082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kabooze_cats3_4
+      name: kabooze_cats4_4
       rect:
         serializedVersion: 2
-        x: 404
+        x: 388
         y: 0
-        width: 68
-        height: 68
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29ba90a9bfc382d4e90e8205db5961b5
-      internalID: -1600124582
+      spriteID: f1c4856ea7a479743982f5d4d11cabd5
+      internalID: -969644653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kabooze_cats3_5
+      name: kabooze_cats4_5
       rect:
         serializedVersion: 2
-        x: 496
+        x: 484
         y: 0
-        width: 72
-        height: 68
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3403dffa666e04b42a231982cc30c0a2
-      internalID: -1672078929
+      spriteID: 08a9d35aacc4dcb459f8d3a514a45426
+      internalID: -2064703062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kabooze_cats3_6
+      name: kabooze_cats4_6
       rect:
         serializedVersion: 2
-        x: 588
+        x: 580
         y: 0
-        width: 76
-        height: 64
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5876443bdcdbddb489786ccb2f13c445
-      internalID: -318222522
+      spriteID: a12a1310128479d4384ff7648d033846
+      internalID: 1284691996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kabooze_cats3_7
+      name: kabooze_cats4_7
       rect:
         serializedVersion: 2
-        x: 680
+        x: 676
         y: 0
-        width: 80
-        height: 64
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        width: 88
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2b5c47cec79a8545a89b21ee1bac63e
-      internalID: -1726811459
+      spriteID: a158901cc671cd94ea3f3a26ef2795d3
+      internalID: -258117354
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kabooze_cats3_0: 2038688272
-      kabooze_cats3_1: -446685514
-      kabooze_cats3_2: 1037819170
-      kabooze_cats3_3: 826677039
-      kabooze_cats3_4: -1600124582
-      kabooze_cats3_5: -1672078929
-      kabooze_cats3_6: -318222522
-      kabooze_cats3_7: -1726811459
+      kabooze_cats4_0: -1269745077
+      kabooze_cats4_1: -1612782905
+      kabooze_cats4_2: 249622501
+      kabooze_cats4_3: -2043286082
+      kabooze_cats4_4: -969644653
+      kabooze_cats4_5: -2064703062
+      kabooze_cats4_6: 1284691996
+      kabooze_cats4_7: -258117354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
