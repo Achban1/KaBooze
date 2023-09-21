@@ -7,12 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class GoBackToMainMenu : MonoBehaviour
 {
-
+    public static bool Paused = false;
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SwitchToMainMenu();
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+            }
+            else
+            {
+                Time.timeScale = 0;
+            }
         }
     }
 
