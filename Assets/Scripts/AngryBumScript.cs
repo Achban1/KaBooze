@@ -37,7 +37,7 @@ public class AngryBumScript : MonoBehaviour
     void Update()
     {
         tableBumped = tableScript.tableBumped;
-        if (timer > 3 || myTable.sqrMagnitude - transform.position.sqrMagnitude < 1)
+        if (timer > 3 || myTable.sqrMagnitude - transform.position.sqrMagnitude < 0.9f)
         {
             boxC.enabled = true;
             speed = 0;
