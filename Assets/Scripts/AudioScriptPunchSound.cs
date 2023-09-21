@@ -20,10 +20,4 @@ public class AudioScriptPunchSound : MonoBehaviour
         audioSource.clip = PunchSounds[randomIndex];
         audioSource.Play();
     }
-
-<<<<<<< Updated upstream
-    
-=======
-
->>>>>>> Stashed changes
 }
