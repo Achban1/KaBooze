@@ -48,6 +48,9 @@ public class Molotov : MonoBehaviour
         }
         GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
+
+        Destroy(gameObject, 3);
+
     }
 
     void Update()
@@ -71,7 +74,7 @@ public class Molotov : MonoBehaviour
         Camera cam = Camera.main;
         float height = cam.orthographicSize;
         float width = height * cam.aspect;
-        destination = new Vector2(Random.Range(-width, width), Random.Range(-height, height-3));
+        destination = new Vector2(Random.Range(-width+0.5f, width-0.5f), Random.Range(-height + 0.5f, height-3));
     }
 
     private void SetPlayerDestination()
