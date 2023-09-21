@@ -1137,7 +1137,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 684f1698a3a979c478da2bea42c23900, type: 3}
     - target: {fileID: 8045109460193045179, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
       propertyPath: m_Name
-      value: kabooze_table 2
+      value: kabooze_table2
       objectReference: {fileID: 0}
     - target: {fileID: 8139996521216488558, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3473,7 +3473,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 22e35dcd90cdb624ea25c54da5609af3, type: 3}
     - target: {fileID: 8045109460193045179, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
       propertyPath: m_Name
-      value: kabooze_table 3
+      value: kabooze_table3
       objectReference: {fileID: 0}
     - target: {fileID: 8139996521216488558, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
       propertyPath: m_LocalPosition.x
