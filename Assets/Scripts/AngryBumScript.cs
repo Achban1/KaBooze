@@ -15,7 +15,7 @@ public class AngryBumScript : MonoBehaviour
     Transform target;
     Rigidbody2D rb2D;
     BoxCollider2D boxC;
-    public float timer;
+    public float timer; 
     public float tableBumped;
     public bool heTookMyTip = false;
     public int tableNr;
@@ -32,7 +32,7 @@ public class AngryBumScript : MonoBehaviour
         boxC = GetComponent<BoxCollider2D>();
         boxC.enabled = false;
     }
-
+    //
     // Update is called once per frame
     void Update()
     {
