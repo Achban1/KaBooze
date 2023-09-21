@@ -8,5 +8,6 @@ public class Explosion : MonoBehaviour
     {
         
         GetComponent<SpriteRenderer>().material.color = new Color(1, 0, 0);
+
     }
 }
