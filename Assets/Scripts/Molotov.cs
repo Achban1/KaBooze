@@ -20,6 +20,7 @@ public class Molotov : MonoBehaviour
     private float rotationSpeed;
 
     public AudioSourcePoolBottles audioSourcePoolBottles;
+    public AudioSourcePoolExplosion audioSourcePoolExplosion;
 
     public Sprite typeOfExplosion;
 
@@ -31,9 +32,10 @@ public class Molotov : MonoBehaviour
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
 
         audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
+        audioSourcePoolExplosion = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolExplosion>();
 
-        
-        
+
+
 
         // Set destination based on rage modes
         if (Mode.Mode)
@@ -104,6 +106,7 @@ public class Molotov : MonoBehaviour
 
 
             audioSourcePoolBottles.BottleSoundFX();
+            //audioSourcePoolExplosion.ExplosionSoundFX();
             Destroy(gameObject);
             
         }

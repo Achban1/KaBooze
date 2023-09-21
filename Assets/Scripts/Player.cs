@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public CameraScript CameraScript;
     public Animator animator;
     public AudioScriptPunchSound AudioScriptPunchSound;
+    public AudioScriptPlayerDeathSound audioScriptPlayerDeathSound;
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
     public GameObject dyingPlayer;  
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
         CameraScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
         AudioScriptPunchSound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptPunchSound>();
+        audioScriptPlayerDeathSound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptPlayerDeathSound>();
     }
 
     // Update is called once per frame
@@ -67,6 +69,7 @@ public class Player : MonoBehaviour
 
         if (health._currentHealth <= 0 && playerIsAlive)
         {
+            audioScriptPlayerDeathSound.PlayerDeathSoundFX();
             playerIsAlive = false;
             Debug.Log("You dead");
             animator.SetBool("alive", false);            

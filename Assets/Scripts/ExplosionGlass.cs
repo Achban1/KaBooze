@@ -7,13 +7,17 @@ public class ExplosionGlass : MonoBehaviour
 {
 
     public AudioSourcePoolBottles audioSourcePoolBottles;
+    public AudioSourcePoolExplosion audioSourcePoolExplosion;
+
     public PlayerHealthScript health;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
-        audioSourcePoolBottles.BottleSoundFX();
+        //audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
+        //audioSourcePoolBottles.BottleSoundFX();
+        audioSourcePoolExplosion = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolExplosion>();
+        audioSourcePoolExplosion.ExplosionSoundFX();
         Destroy(gameObject, 3);
         
     }
