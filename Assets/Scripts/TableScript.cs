@@ -32,10 +32,17 @@ public class TableScript : MonoBehaviour
             bumCount = 0;
             bumTimer = 0;
         }
-        if (bumTimer > 17)
+        if (bumTimer > 10)
         {
             cash += Random.Range(2, 8);
         }
+        //if (bumCount < 5)
+        //{
+        //    int randomMob = Random.Range(0, 5);
+        //    GameObject selectedMob = AngryBum[randomMob];
+        //    Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
+        //}
+
     }
     private void bumSpawn()
     {
