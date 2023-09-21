@@ -75,6 +75,8 @@ public class Molotov : MonoBehaviour
             Destroy(gameObject);
             Instantiate(GlassArea, new Vector3(transform.position.x, transform.position.y, 1), Quaternion.identity);
             GameObject newExplosion  = Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            newExplosion.GetComponent<SpriteRenderer>().material.color = new Color(Random.Range(0.5f, 1), 0, 0);
+
             if (newExplosion.tag == "Big Explosion")
             {
                 Destroy(newExplosion, 0.8f);
@@ -85,7 +87,7 @@ public class Molotov : MonoBehaviour
             }
             
             
-            newExplosion.GetComponent<SpriteRenderer>().material.color = new Color(Random.Range(0.5f, 1), 0, 0);
+            
 
         }
     }
