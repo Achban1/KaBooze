@@ -10,8 +10,6 @@ public class CoinCounterScript : MonoBehaviour
     public TextMeshProUGUI coinCountText;
     public int coinCount;
     [SerializeField] CoinText coinText;
-    public GameObject player;
-    public GameObject barDesk;
     void Start()
     {
         coinCount = 0;
@@ -29,12 +27,7 @@ public class CoinCounterScript : MonoBehaviour
 
     void  UpdateCoinCountUI()
     {
-        coinCountText.text = "Coins: " + coinCount.ToString() + "/100";
-
-        
+        coinCountText.text = "Coins: " + coinCount.ToString();
     }
-
-
-
 
 }
