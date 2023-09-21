@@ -36,12 +36,13 @@ public class TableScript : MonoBehaviour
         {
             cash += Random.Range(2, 8);
         }
-        //if (bumCount < 5)
-        //{
-        //    int randomMob = Random.Range(0, 5);
-        //    GameObject selectedMob = AngryBum[randomMob];
-        //    Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
-        //}
+        if (bumCount < 5)
+        {
+            int randomMob = Random.Range(0, 5);
+            GameObject selectedMob = AngryBum[randomMob];
+            Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
+            bumCount++;
+        }
 
     }
     private void bumSpawn()
@@ -55,7 +56,7 @@ public class TableScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Change to playerLayer
-        if (collision.gameObject.layer == 3 && bumCount < 2) 
+        if (collision.gameObject.layer == 3 ) //&& bumCount < 2) 
         {
             Invoke("bumSpawn", 1);
             bumCount++;
