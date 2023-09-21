@@ -16,12 +16,15 @@ public class Molotov : MonoBehaviour
     public GameObject GlassArea;
     public bartenderThrow Mode;
     private float rotationSpeed;
+    public AudioClip[] bottleBreakSound;
+    private AudioSource audioSource;
   
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
+        audioSource = GetComponent<AudioSource>();
 
         
         // Set destination based on rage modes
@@ -57,7 +60,7 @@ public class Molotov : MonoBehaviour
 
         // Destroy if close to the destination
         if (Vector2.Distance(transform.position, destination) < 0.1f)
-        {
+        {           
             Destroy(gameObject);
             Instantiate(GlassArea, transform.position, transform.rotation);
         }
@@ -82,7 +85,10 @@ public class Molotov : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player") || col.gameObject.layer == 7 || col.gameObject.layer == 6)
         {
+
+                
             Destroy(gameObject);
+            
         }
     }
 
