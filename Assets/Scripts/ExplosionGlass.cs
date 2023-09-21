@@ -10,9 +10,9 @@ public class ExplosionGlass : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //AudioScriptGlassBottle = GameObject.FindGameObjectWithTag("Main Camera").GetComponent<AudioScriptGlassBottle>();
-        //GlassBreakSound();
-        //Destroy(gameObject, 1);
+        audioScriptGlassBottle = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptGlassBottle>();
+        audioScriptGlassBottle.GlassBreakSound();
+        Destroy(gameObject, 1);
 
     }
 
