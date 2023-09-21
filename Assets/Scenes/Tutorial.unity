@@ -818,7 +818,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press escape \nto go back"
+  m_text: "Press escape \nto continue"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e02b4edda592e7a41a29af90e754081f, type: 2}
   m_sharedMaterial: {fileID: -4626228090647259538, guid: e02b4edda592e7a41a29af90e754081f, type: 2}

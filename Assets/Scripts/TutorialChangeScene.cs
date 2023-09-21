@@ -22,7 +22,7 @@ public class TutorialChangeScene : MonoBehaviour
     private void SwitchToMainMenuScene()
     {
      
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("TheBar");
     }
 
 }

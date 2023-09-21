@@ -7,7 +7,7 @@ public class ButtonsAction : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("TheBar");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void HowToPlay()
