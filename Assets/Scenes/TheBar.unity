@@ -877,6 +877,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1280007114}
     m_Modifications:
+    - target: {fileID: 2315077340413254942, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 684f1698a3a979c478da2bea42c23900, type: 3}
     - target: {fileID: 8045109460193045179, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
       propertyPath: m_Name
       value: kabooze_table 2
@@ -1239,7 +1243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 5ceb30e62a4568141a78575852fe6fbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.6
+      value: -3.73
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 5ceb30e62a4568141a78575852fe6fbc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2630,6 +2634,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1280007114}
     m_Modifications:
+    - target: {fileID: 2315077340413254942, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 22e35dcd90cdb624ea25c54da5609af3, type: 3}
     - target: {fileID: 8045109460193045179, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
       propertyPath: m_Name
       value: kabooze_table 3
@@ -2793,7 +2801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5.87, y: 4.88}
+  m_AnchoredPosition: {x: -5.87, y: 4.8}
   m_SizeDelta: {x: 403.33325, y: 154.35968}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471071776
@@ -4568,6 +4576,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.66
       objectReference: {fileID: 0}
+    - target: {fileID: 2315077340413254942, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4bb90f7c656bf4c4cab43f2d0b0c37dc, type: 3}
     - target: {fileID: 8045109460193045179, guid: 57e08bfbaf51f534fa9fd04ca4b51993, type: 3}
       propertyPath: m_Name
       value: kabooze_table5
