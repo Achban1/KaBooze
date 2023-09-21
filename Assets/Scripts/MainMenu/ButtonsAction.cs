@@ -10,6 +10,10 @@ public class ButtonsAction : MonoBehaviour
         SceneManager.LoadScene("TheBar");
     }
 
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
     public void QuitGame()
     {
 #if UNITY_EDITOR

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheBar.unity
     guid: e48b05f0dde6105439cfccb7164b0b6c
+  - enabled: 1
+    path: Assets/Tutorial.unity
+    guid: 316b864f22f512541ac35da36fa0f3de
   m_configObjects: {}
