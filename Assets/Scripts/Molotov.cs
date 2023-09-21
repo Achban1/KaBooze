@@ -18,11 +18,9 @@ public class Molotov : MonoBehaviour
 
     public bartenderThrow Mode;
     private float rotationSpeed;
-<<<<<<< HEAD
-    //public AudioScriptGlassBottle audioScriptGlassBottle;
-=======
+
     public AudioSourcePoolBottles audioSourcePoolBottles;
->>>>>>> 955f83f1227f3ced2df3fc7e3302f4eb2646073e
+
     public Sprite typeOfExplosion;
 
     void Start()
@@ -31,11 +29,9 @@ public class Molotov : MonoBehaviour
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
-<<<<<<< HEAD
-        //audioScriptGlassBottle = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptGlassBottle>();
-=======
+
         audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
->>>>>>> 955f83f1227f3ced2df3fc7e3302f4eb2646073e
+
         
         
 
@@ -106,11 +102,8 @@ public class Molotov : MonoBehaviour
         if (col.gameObject.CompareTag("Player") || col.gameObject.layer == 7 || col.gameObject.layer == 6)
         {
 
-<<<<<<< HEAD
-            //audioScriptGlassBottle.GlassBreakSound();
-=======
+
             audioSourcePoolBottles.BottleSoundFX();
->>>>>>> 955f83f1227f3ced2df3fc7e3302f4eb2646073e
             Destroy(gameObject);
             
         }
