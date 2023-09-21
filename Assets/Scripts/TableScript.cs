@@ -7,7 +7,7 @@ public class TableScript : MonoBehaviour
 {
     public PlayerHealthScript health;
     public GameObject []AngryBum;
-    public float bumCount;
+    public float bumCount =1;
     public float bumTimer;
     public float cash = 0;
     public CoinCounterScript CoinCounterScript;
@@ -32,23 +32,21 @@ public class TableScript : MonoBehaviour
         {
             bumTimer += Time.deltaTime;
         }
-        else if (bumCount < 3) 
+        else if (bumCount < 4) 
         {
             //Setting bumPosY to avoid bump while bumPosX is 0
-            if (bumPosX == 0) 
-            { 
-                bumPosY = -0.5f;
-            }
-            else
-            {
-                bumPosY = 0;
-            }
+            //if (bumPosX == 0) 
+            //{ 
+            //    bumPosY = -0.3f;
+            //}
+            //else
+            //{
+            //    bumPosY = 0;
+            //}
             bumSpawn();
             bumPosX += 0.5f;
             bumCount++;
-            bumTimer = 0;
-            
-
+            bumTimer = 0;   
         }
         if (bumTimer > 10)
         {
@@ -68,7 +66,19 @@ public class TableScript : MonoBehaviour
         int randomMob = Random.Range(0, 5);
         GameObject selectedMob = AngryBum[randomMob];
         GameObject newMob = Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
-        newMob.GetComponent<AngryBumScript>().myTable = new Vector3 (tablePos.x + bumPosX, tablePos.y + bumPosY, 0);
+        //Ändra här
+        if (bumCount == 1)
+        {
+            newMob.GetComponent<AngryBumScript>().myTable = new Vector3(tablePos.x + 0.031f, tablePos.y + -0.192f, 0);
+        }
+        else if(bumCount == 2)
+        {
+            newMob.GetComponent<AngryBumScript>().myTable = new Vector3(tablePos.x + -0.268f, tablePos.y + -0.125f, 0);
+        }
+        else if (bumCount == 3)
+        {
+            newMob.GetComponent<AngryBumScript>().myTable = new Vector3(tablePos.x + 0.232f, tablePos.y + -0.058f, 0);
+        }
     }
 
 
