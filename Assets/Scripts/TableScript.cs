@@ -7,15 +7,16 @@ public class TableScript : MonoBehaviour
 {
     public CoinCounterScript CoinCounterScript;
     public PlayerHealthScript health;
-    public GameObject []AngryBum;
+    public GameObject[] AngryBum;
     public AngryBumScript AngryBumScript;
     public float bumCount = 1;
     public float bumTimer;
     public float cash = 0;
-    public float bumPosX = -0.5f;
-    public float bumPosY = 0;
-    public float ThistableNr = 0;
+    public float ThisTableNr = 0;
     public float tableBumped = 0;
+    Vector3 chair1;
+    Vector3 chair2;
+    Vector3 chair3;
 
     public Vector3 tablePos = Vector3.zero;
 
@@ -25,7 +26,10 @@ public class TableScript : MonoBehaviour
         CoinCounterScript = GameObject.FindGameObjectWithTag("CoinCounterCanvas").GetComponent<CoinCounterScript>();
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
         cash = 1;
-        tablePos = new Vector3 (transform.position.x, transform.position.y , 0);        
+        tablePos = new Vector3(transform.position.x, transform.position.y, 0);
+        chair1 = this.transform.GetChild(0).transform.position;
+        chair2 = this.transform.GetChild(1).transform.position;
+        chair3 = this.transform.GetChild(2).transform.position;
     }
 
     // Update is called once per frame
@@ -35,21 +39,11 @@ public class TableScript : MonoBehaviour
         {
             bumTimer += Time.deltaTime;
         }
-        else if (bumCount < 4) 
+        else if (bumCount < 4)
         {
-            //Setting bumPosY to avoid bump while bumPosX is 0
-            if (bumPosX == 0)
-            {
-                bumPosY = -0.3f;
-            }
-            else
-            {
-                bumPosY = 0;
-            }
             bumSpawn();
-            bumPosX += 0.5f;
             bumCount++;
-            bumTimer = 0;   
+            bumTimer = 0;
         }
         if (bumTimer > 10)
         {
@@ -60,23 +54,23 @@ public class TableScript : MonoBehaviour
             case 1:
                 {
                     tablePos = transform.position;
-                    tablePos = new Vector3(tablePos.x + 0.246f, tablePos.y + -0.034f, 0);
+                    tablePos = chair1;
                     break;
                 }
             case 2:
                 {
                     tablePos = transform.position;
-                    tablePos = new Vector3(tablePos.x - 0.013f, tablePos.y - 0.207f, 0);
+                    tablePos = chair2;
                     break;
                 }
             case 3:
                 {
                     tablePos = transform.position;
-                    tablePos = new Vector3(tablePos.x - 0.299f, tablePos.y  -0.14f, 0);
+                    tablePos = chair3;
                     break;
                 }
         }
-        
+
         //if (bumCount < 5)
         //{
         //    int randomMob = Random.Range(0, 5);
@@ -93,29 +87,29 @@ public class TableScript : MonoBehaviour
         GameObject newMob = Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
         newMob.GetComponent<AngryBumScript>().myTable = tablePos;
         //Setting tablenumber for bumping Table
-        newMob.GetComponent<AngryBumScript>().tableNr = ThistableNr;
+        newMob.GetComponent<AngryBumScript>().tableNr = ThisTableNr;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Change to playerLayer
-        if (collision.gameObject.layer == 3 ) //&& bumCount < 2) 
+        if (collision.gameObject.layer == 3) //&& bumCount < 2) 
         {
-           
+
             bumCount++;
             Debug.Log("CoinCollected");
-            CoinCounterScript.CollectCoin();            
+            CoinCounterScript.CollectCoin();
         }
         if (collision.gameObject.layer == 3)
         {
-            tableBumped = ThistableNr;
+            tableBumped = ThisTableNr;
             health.collectedCash = health.collectedCash + cash;
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();
             //Telling AngryBums that someone stole their tip
-            
+
         }
 
     }
-     
+
 }

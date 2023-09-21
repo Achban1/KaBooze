@@ -6,12 +6,12 @@ using UnityEngine;
 public class AngryBumScript : MonoBehaviour
 {
     public TableScript tableScript;
-    public float speed = 3;      
-    public float movingX = 0;    
-    public float movingY = 0;    
+    public float speed = 3;
+    public float movingX = 0;
+    public float movingY = 0;
     public bool fall;
     public Animator animator;
-    public SpriteRenderer spriteRenderer;       
+    public SpriteRenderer spriteRenderer;
     Transform target;
     Rigidbody2D rb2D;
     BoxCollider2D boxC;
@@ -25,25 +25,25 @@ public class AngryBumScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
         tableScript = GameObject.FindGameObjectWithTag("Furniture").GetComponent<TableScript>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb2D = GetComponent<Rigidbody2D>();
         boxC = GetComponent<BoxCollider2D>();
-        boxC.enabled = false;        
+        boxC.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         tableBumped = tableScript.tableBumped;
-        if (timer > 3 || myTable.sqrMagnitude - transform.position.sqrMagnitude < 1 ) 
+        if (timer > 3 || myTable.sqrMagnitude - transform.position.sqrMagnitude < 1)
         {
             boxC.enabled = true;
-        }      
+        }
         if (tableBumped == tableNr)
         {
-            heTookMyTip = true;            
+            heTookMyTip = true;
         }
         if (heTookMyTip == true)
         {
@@ -78,7 +78,7 @@ public class AngryBumScript : MonoBehaviour
         }
         direction.Normalize();
         rb2D.velocity = direction * speed;
-       
+
         timer += Time.deltaTime;
     }
     private void OnCollisionEnter2D(Collision2D collision)
