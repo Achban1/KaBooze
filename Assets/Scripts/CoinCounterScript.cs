@@ -2,22 +2,26 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class CoinCounterScript : MonoBehaviour
 {
+    public AudioScriptCoinCollected audioScriptCoinCollected;
     public TextMeshProUGUI coinCountText;
-    private int coinCount;
-
+    public int coinCount;
+    [SerializeField] CoinText coinText;
     void Start()
     {
         coinCount = 0;
         UpdateCoinCountUI();
+        audioScriptCoinCollected = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptCoinCollected>();
     }
 
     public void CollectCoin()
     {
         Debug.Log("CollectCoinVoid");
         coinCount++;
+        audioScriptCoinCollected.CoinCollectSoundFX();
         UpdateCoinCountUI();
     }
 
