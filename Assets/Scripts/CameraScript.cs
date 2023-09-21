@@ -19,12 +19,14 @@ public class CameraScript : MonoBehaviour
         Application.targetFrameRate = 60;
         if (cameraTransform == null)
             cameraTransform = GetComponent<Transform>();
+        originalPosition = transform.position;
     }
     public void Shake()
     {
-        originalPosition = cameraTransform.localPosition;
+        
         InvokeRepeating("StartShaking", 0f, 0.01f);
         Invoke("StopShaking", shakeDuration);
+        
     }
 
     private void StartShaking()
