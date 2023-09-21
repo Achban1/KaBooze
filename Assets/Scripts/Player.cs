@@ -96,6 +96,7 @@ public class Player : MonoBehaviour
             CameraScript.Shake();
             Invoke("BackToWhite", 0.1f);
         }
+
     }
     private void BackToWhite()
     {
