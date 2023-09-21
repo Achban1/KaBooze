@@ -654,6 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63daeee09920a945be9eff168e33236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoinCounterScript: {fileID: 1977255726}
   health: {fileID: 0}
   AngryBum:
   - {fileID: 8528965766251231687, guid: 5ea82022544d4cc45a05c34c5e717f47, type: 3}
@@ -661,12 +662,14 @@ MonoBehaviour:
   - {fileID: 8528965766251231687, guid: 3c13153ad7069b44c9d5a98bfc32df9b, type: 3}
   - {fileID: 8528965766251231687, guid: 943cdaa65834beb438c537a9ad247a62, type: 3}
   - {fileID: 8528965766251231687, guid: f534cc16fd1e8b5448675c644ff9be5f, type: 3}
+  AngryBumScript: {fileID: 0}
   bumCount: 0
   bumTimer: 0
   cash: 0
-  CoinCounterScript: {fileID: 1977255726}
   bumPosX: -0.5
   bumPosY: 0
+  tableNr: 4
+  tableBumped: 0
   tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &460661298
 SpriteRenderer:
@@ -1626,6 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63daeee09920a945be9eff168e33236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoinCounterScript: {fileID: 1977255726}
   health: {fileID: 0}
   AngryBum:
   - {fileID: 8528965766251231687, guid: 5ea82022544d4cc45a05c34c5e717f47, type: 3}
@@ -1633,12 +1637,14 @@ MonoBehaviour:
   - {fileID: 8528965766251231687, guid: 3c13153ad7069b44c9d5a98bfc32df9b, type: 3}
   - {fileID: 8528965766251231687, guid: 943cdaa65834beb438c537a9ad247a62, type: 3}
   - {fileID: 8528965766251231687, guid: f534cc16fd1e8b5448675c644ff9be5f, type: 3}
+  AngryBumScript: {fileID: 0}
   bumCount: 0
   bumTimer: 0
   cash: 0
-  CoinCounterScript: {fileID: 1977255726}
   bumPosX: -0.5
   bumPosY: 0
+  tableNr: 5
+  tableBumped: 0
   tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1085574827
 SpriteRenderer:
@@ -2917,6 +2923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63daeee09920a945be9eff168e33236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoinCounterScript: {fileID: 1977255726}
   health: {fileID: 0}
   AngryBum:
   - {fileID: 8528965766251231687, guid: 5ea82022544d4cc45a05c34c5e717f47, type: 3}
@@ -2924,12 +2931,14 @@ MonoBehaviour:
   - {fileID: 8528965766251231687, guid: 3c13153ad7069b44c9d5a98bfc32df9b, type: 3}
   - {fileID: 8528965766251231687, guid: 943cdaa65834beb438c537a9ad247a62, type: 3}
   - {fileID: 8528965766251231687, guid: f534cc16fd1e8b5448675c644ff9be5f, type: 3}
+  AngryBumScript: {fileID: 0}
   bumCount: 0
   bumTimer: 0
   cash: 0
-  CoinCounterScript: {fileID: 1977255726}
   bumPosX: -0.5
   bumPosY: 0
+  tableNr: 3
+  tableBumped: 0
   tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1579374762
 SpriteRenderer:
@@ -3648,6 +3657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63daeee09920a945be9eff168e33236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoinCounterScript: {fileID: 1977255726}
   health: {fileID: 0}
   AngryBum:
   - {fileID: 8528965766251231687, guid: 5ea82022544d4cc45a05c34c5e717f47, type: 3}
@@ -3655,12 +3665,14 @@ MonoBehaviour:
   - {fileID: 8528965766251231687, guid: 3c13153ad7069b44c9d5a98bfc32df9b, type: 3}
   - {fileID: 8528965766251231687, guid: 943cdaa65834beb438c537a9ad247a62, type: 3}
   - {fileID: 8528965766251231687, guid: f534cc16fd1e8b5448675c644ff9be5f, type: 3}
+  AngryBumScript: {fileID: 0}
   bumCount: 0
   bumTimer: 0
   cash: 0
-  CoinCounterScript: {fileID: 1977255726}
   bumPosX: -0.5
   bumPosY: 0
+  tableNr: 1
+  tableBumped: 0
   tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1868299204
 SpriteRenderer:
@@ -4178,6 +4190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c63daeee09920a945be9eff168e33236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoinCounterScript: {fileID: 1977255726}
   health: {fileID: 0}
   AngryBum:
   - {fileID: 8528965766251231687, guid: 5ea82022544d4cc45a05c34c5e717f47, type: 3}
@@ -4185,12 +4198,14 @@ MonoBehaviour:
   - {fileID: 8528965766251231687, guid: 3c13153ad7069b44c9d5a98bfc32df9b, type: 3}
   - {fileID: 8528965766251231687, guid: 943cdaa65834beb438c537a9ad247a62, type: 3}
   - {fileID: 8528965766251231687, guid: f534cc16fd1e8b5448675c644ff9be5f, type: 3}
+  AngryBumScript: {fileID: 0}
   bumCount: 0
   bumTimer: 0
   cash: 0
-  CoinCounterScript: {fileID: 1977255726}
   bumPosX: -0.5
   bumPosY: 0
+  tableNr: 2
+  tableBumped: 0
   tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1959069143
 SpriteRenderer:

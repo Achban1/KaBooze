@@ -24,8 +24,7 @@ public class Molotov : MonoBehaviour
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
-        audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
-        
+        audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();  
         
 
         // Set destination based on rage modes
