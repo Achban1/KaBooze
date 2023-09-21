@@ -40,6 +40,8 @@ public class AngryBumScript : MonoBehaviour
         if (timer > 3 || myTable.sqrMagnitude - transform.position.sqrMagnitude < 1)
         {
             boxC.enabled = true;
+            speed = 0;
+            animator.SetBool("still", true);
         }
         if (tableBumped == tableNr)
         {
@@ -48,6 +50,7 @@ public class AngryBumScript : MonoBehaviour
         if (heTookMyTip == true)
         {
             direction = target.position - transform.position;
+            speed = 2;
         }
         else
         {
