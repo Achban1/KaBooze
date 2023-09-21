@@ -17,9 +17,10 @@ public class AngryBumScript : MonoBehaviour
     BoxCollider2D boxC;
     public float timer;
     public float tableBumped;
-    public bool heTookMyTip;
+    public bool heTookMyTip = false;
     public float tableNr;
     public Vector3 myTable;
+    Vector2 direction;
 
 
     // Start is called before the first frame update
@@ -39,9 +40,7 @@ public class AngryBumScript : MonoBehaviour
         if (timer > 3 || myTable.sqrMagnitude - transform.position.sqrMagnitude < 1 ) 
         {
             boxC.enabled = true;
-        }        
-        Vector2 direction = myTable - transform.position;
-
+        }      
         if (tableBumped == tableNr)
         {
             heTookMyTip = true;            
@@ -49,6 +48,10 @@ public class AngryBumScript : MonoBehaviour
         if (heTookMyTip == true)
         {
             direction = target.position - transform.position;
+        }
+        else
+        {
+            direction = myTable - transform.position;
         }
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
@@ -78,8 +81,6 @@ public class AngryBumScript : MonoBehaviour
        
         timer += Time.deltaTime;
     }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 9)

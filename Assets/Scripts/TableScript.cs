@@ -14,7 +14,7 @@ public class TableScript : MonoBehaviour
     public float cash = 0;
     public float bumPosX = -0.5f;
     public float bumPosY = 0;
-    public float tableNr = 0;
+    public float ThistableNr = 0;
     public float tableBumped = 0;
 
     public Vector3 tablePos = Vector3.zero;
@@ -93,7 +93,7 @@ public class TableScript : MonoBehaviour
         GameObject newMob = Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
         newMob.GetComponent<AngryBumScript>().myTable = tablePos;
         //Setting tablenumber for bumping Table
-        newMob.GetComponent<AngryBumScript>().tableNr = tableNr;
+        newMob.GetComponent<AngryBumScript>().tableNr = ThistableNr;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -101,18 +101,19 @@ public class TableScript : MonoBehaviour
         //Change to playerLayer
         if (collision.gameObject.layer == 3 ) //&& bumCount < 2) 
         {
-            Invoke("bumSpawn", 1);
+           
             bumCount++;
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();            
         }
         if (collision.gameObject.layer == 3)
         {
+            tableBumped = ThistableNr;
             health.collectedCash = health.collectedCash + cash;
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();
             //Telling AngryBums that someone stole their tip
-            tableBumped = tableNr;
+            
         }
 
     }
