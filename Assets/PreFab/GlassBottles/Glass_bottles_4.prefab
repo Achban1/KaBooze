@@ -102,7 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
   rageMode: 0
-  GlassArea: {fileID: 4580866107163104880, guid: 7b7c0817d35acfe4fb91b57a9925ef04, type: 3}
+  GlassArea: {fileID: 0}
+  Explosion: {fileID: 7186573183297292984, guid: cb44c38fe824ffb48a3f8e13d46912d7, type: 3}
   Mode: {fileID: 0}
   audioScriptGlassBottle: {fileID: 0}
   typeOfExplosion: {fileID: 0}
