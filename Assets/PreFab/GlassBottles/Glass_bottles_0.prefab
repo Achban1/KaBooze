@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -3295347463536440021, guid: 1a6105981398417458dc83c7b823eac2, type: 3}
+  m_Sprite: {fileID: 588154868, guid: 5b8a35c0134de064c900020eee5429f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,14 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
   rageMode: 0
-  GlassArea: {fileID: 4580866107163104880, guid: 200f13ab43346524fb7e1377e8888a68, type: 3}
+  GlassArea: {fileID: 4580866107163104880, guid: 853c27720b68a2c44aaf71c63e63d164, type: 3}
   Mode: {fileID: 0}
-  bottleBreakSound:
-  - {fileID: 8300000, guid: ae42125b4eea40f498ac194eb5d25f45, type: 3}
-  - {fileID: 8300000, guid: 8eda1dfb1f76e5b4784bd46b755123c0, type: 3}
-  - {fileID: 8300000, guid: 61730f4a72a1a97449eab56f72519d0e, type: 3}
-  - {fileID: 8300000, guid: 4e8b127e1f63e8344a74d1018288fc77, type: 3}
-  - {fileID: 8300000, guid: 4e2e11f06d1f2934d9758e919ce52c93, type: 3}
+  audioScriptGlassBottle: {fileID: 0}
+  typeOfExplosion: {fileID: -547365120, guid: 757b6043c1330a54586a42c67c840302, type: 3}
 --- !u!50 &-5049377788726022492
 Rigidbody2D:
   serializedVersion: 4

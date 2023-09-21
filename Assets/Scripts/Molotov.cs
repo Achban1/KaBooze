@@ -17,6 +17,7 @@ public class Molotov : MonoBehaviour
     public bartenderThrow Mode;
     private float rotationSpeed;
     public AudioScriptGlassBottle audioScriptGlassBottle;
+    public Sprite typeOfExplosion;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class Molotov : MonoBehaviour
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
         audioScriptGlassBottle = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptGlassBottle>();
         
-
+        
 
         // Set destination based on rage modes
         if (Mode.Mode)
@@ -46,7 +47,7 @@ public class Molotov : MonoBehaviour
         {
             rotationSpeed += 250;
         }
-        GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+        
 
 
         Destroy(gameObject, 3);
@@ -65,7 +66,7 @@ public class Molotov : MonoBehaviour
         if (Vector2.Distance(transform.position, destination) < 0.1f)
         {           
             Destroy(gameObject);
-            Instantiate(GlassArea, transform.position, transform.rotation);
+            Instantiate(GlassArea, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
         }
     }
 
