@@ -16,16 +16,17 @@ public class Molotov : MonoBehaviour
     public GameObject GlassArea;
     public bartenderThrow Mode;
     private float rotationSpeed;
-    
-  
+    public AudioScriptGlassBottle audioScriptGlassBottle;
+
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
+        audioScriptGlassBottle = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptGlassBottle>();
         
 
-        
+
         // Set destination based on rage modes
         if (Mode.Mode)
         {
@@ -88,7 +89,7 @@ public class Molotov : MonoBehaviour
         if (col.gameObject.CompareTag("Player") || col.gameObject.layer == 7 || col.gameObject.layer == 6)
         {
 
-                
+            audioScriptGlassBottle.GlassBreakSound();
             Destroy(gameObject);
             
         }

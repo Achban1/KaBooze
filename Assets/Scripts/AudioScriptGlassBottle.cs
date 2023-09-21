@@ -14,7 +14,7 @@ public class AudioScriptGlassBottle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void GlassBreakSound()
+    public void GlassBreakSound()
     {
         int randomIndex = Random.Range(0, bottleBreakSound.Length);
         audioSource.clip = bottleBreakSound[randomIndex];
