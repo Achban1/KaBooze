@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b0b3e0d6aabb24ea537ed528b05973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tableScript: {fileID: 0}
   speed: 3
   movingX: 0
   movingY: 0
@@ -180,9 +179,6 @@ MonoBehaviour:
   animator: {fileID: 2504598326360112497}
   spriteRenderer: {fileID: 6272746032089223023}
   timer: 0
-  tableBumped: 0
-  heTookMyTip: 0
-  tableNr: 0
   myTable: {x: 0, y: 0, z: 0}
 --- !u!95 &2504598326360112497
 Animator:

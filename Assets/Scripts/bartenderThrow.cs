@@ -84,7 +84,7 @@ public class bartenderThrow : MonoBehaviour
     {
         
         Mode = true;
-        fireRate = 0.1f;
+        fireRate = 0.08f;
         if (rageTimer > ti + 15)
         {
             
