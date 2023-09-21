@@ -11,6 +11,10 @@ public class TableScript : MonoBehaviour
     public float bumTimer;
     public float cash = 0;
     public CoinCounterScript CoinCounterScript;
+    public float bumPosX = -0.5f;
+    public float bumPosY = 0;
+
+    public Vector3 tablePos = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -18,38 +22,53 @@ public class TableScript : MonoBehaviour
         CoinCounterScript = GameObject.FindGameObjectWithTag("CoinCounterCanvas").GetComponent<CoinCounterScript>();
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
         cash = 1;
+        tablePos = new Vector3 (transform.position.x, transform.position.y - 0.2f, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (bumTimer < 20)
+        if (bumTimer < 5)
         {
             bumTimer += Time.deltaTime;
         }
-        else
+        else if (bumCount < 3) 
         {
-            bumCount = 0;
+            //Setting bumPosY to avoid bump while bumPosX is 0
+            if (bumPosX == 0) 
+            { 
+                bumPosY = -0.5f;
+            }
+            else
+            {
+                bumPosY = 0;
+            }
+            bumSpawn();
+            bumPosX += 0.5f;
+            bumCount++;
             bumTimer = 0;
+            
+
         }
         if (bumTimer > 10)
         {
             cash += Random.Range(2, 8);
         }
-        if (bumCount < 5)
-        {
-            int randomMob = Random.Range(0, 5);
-            GameObject selectedMob = AngryBum[randomMob];
-            Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
-            bumCount++;
-        }
+        //if (bumCount < 5)
+        //{
+        //    int randomMob = Random.Range(0, 5);
+        //    GameObject selectedMob = AngryBum[randomMob];
+        //    Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
+        //    bumCount++;
+        //}
 
     }
     private void bumSpawn()
     {
         int randomMob = Random.Range(0, 5);
         GameObject selectedMob = AngryBum[randomMob];
-        Instantiate(selectedMob, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        GameObject newMob = Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
+        newMob.GetComponent<AngryBumScript>().myTable = new Vector3 (tablePos.x + bumPosX, tablePos.y + bumPosY, 0);
     }
 
 
@@ -61,14 +80,13 @@ public class TableScript : MonoBehaviour
             Invoke("bumSpawn", 1);
             bumCount++;
             Debug.Log("CoinCollected");
-            CoinCounterScript.CollectCoin();
+            CoinCounterScript.CollectCoin();            
         }
         if (collision.gameObject.layer == 3)
         {
             health.collectedCash = health.collectedCash + cash;
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();
-
         }
 
     }
