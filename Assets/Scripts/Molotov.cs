@@ -18,7 +18,11 @@ public class Molotov : MonoBehaviour
 
     public bartenderThrow Mode;
     private float rotationSpeed;
-    public AudioScriptGlassBottle audioScriptGlassBottle;
+<<<<<<< HEAD
+    //public AudioScriptGlassBottle audioScriptGlassBottle;
+=======
+    public AudioSourcePoolBottles audioSourcePoolBottles;
+>>>>>>> 955f83f1227f3ced2df3fc7e3302f4eb2646073e
     public Sprite typeOfExplosion;
 
     void Start()
@@ -27,7 +31,11 @@ public class Molotov : MonoBehaviour
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
-        audioScriptGlassBottle = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptGlassBottle>();
+<<<<<<< HEAD
+        //audioScriptGlassBottle = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptGlassBottle>();
+=======
+        audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
+>>>>>>> 955f83f1227f3ced2df3fc7e3302f4eb2646073e
         
         
 
@@ -72,8 +80,8 @@ public class Molotov : MonoBehaviour
             Instantiate(GlassArea, new Vector3(transform.position.x, transform.position.y, 1), Quaternion.identity);
             GameObject newExplosion  = Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             Destroy(newExplosion, 0.4f);
-
-            GetComponent<SpriteRenderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            
+            newExplosion.GetComponent<SpriteRenderer>().material.color = new Color(Random.Range(0.5f, 1), 0, 0);
 
         }
     }
@@ -98,7 +106,11 @@ public class Molotov : MonoBehaviour
         if (col.gameObject.CompareTag("Player") || col.gameObject.layer == 7 || col.gameObject.layer == 6)
         {
 
-            audioScriptGlassBottle.GlassBreakSound();
+<<<<<<< HEAD
+            //audioScriptGlassBottle.GlassBreakSound();
+=======
+            audioSourcePoolBottles.BottleSoundFX();
+>>>>>>> 955f83f1227f3ced2df3fc7e3302f4eb2646073e
             Destroy(gameObject);
             
         }

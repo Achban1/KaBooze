@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AngryBumScript : MonoBehaviour
 {
+    public TableScript tableScript;
     public float speed = 3;      
     public float movingX = 0;    
     public float movingY = 0;    
@@ -15,13 +16,16 @@ public class AngryBumScript : MonoBehaviour
     Rigidbody2D rb2D;
     BoxCollider2D boxC;
     public float timer;
-
+    public float tableBumped;
+    public bool heTookMyTip;
+    public float tableNr;
     public Vector3 myTable;
 
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {   
+        tableScript = GameObject.FindGameObjectWithTag("Furniture").GetComponent<TableScript>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb2D = GetComponent<Rigidbody2D>();
         boxC = GetComponent<BoxCollider2D>();
@@ -30,14 +34,22 @@ public class AngryBumScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
+        tableBumped = tableScript.tableBumped;
         if (timer > 3 || myTable.sqrMagnitude - transform.position.sqrMagnitude < 1 ) 
         {
             boxC.enabled = true;
-        }
-       //Vector2 direction = target.position - transform.position;
+        }        
         Vector2 direction = myTable - transform.position;
 
+        if (tableBumped == tableNr)
+        {
+            heTookMyTip = true;            
+        }
+        if (heTookMyTip == true)
+        {
+            direction = target.position - transform.position;
+        }
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             animator.SetFloat("movingX", direction.x);
