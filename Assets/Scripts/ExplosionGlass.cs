@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class ExplosionGlass : MonoBehaviour
 {
+    public AudioScriptGlassBottle audioScriptGlassBottle;
     public PlayerHealthScript health;
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 1);
+        //AudioScriptGlassBottle = GameObject.FindGameObjectWithTag("Main Camera").GetComponent<AudioScriptGlassBottle>();
+        //GlassBreakSound();
+        //Destroy(gameObject, 1);
+
     }
 
     // Update is called once per frame

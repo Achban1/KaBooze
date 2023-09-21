@@ -16,15 +16,14 @@ public class Molotov : MonoBehaviour
     public GameObject GlassArea;
     public bartenderThrow Mode;
     private float rotationSpeed;
-    public AudioClip[] bottleBreakSound;
-    private AudioSource audioSource;
+    
   
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
-        audioSource = GetComponent<AudioSource>();
+        
 
         
         // Set destination based on rage modes
