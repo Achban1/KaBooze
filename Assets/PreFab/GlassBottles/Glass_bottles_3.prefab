@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 1459181976256199526, guid: 1a6105981398417458dc83c7b823eac2, type: 3}
+  m_Sprite: {fileID: 10845777, guid: 5b8a35c0134de064c900020eee5429f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +104,8 @@ MonoBehaviour:
   rageMode: 0
   GlassArea: {fileID: 4580866107163104880, guid: 200f13ab43346524fb7e1377e8888a68, type: 3}
   Mode: {fileID: 0}
-  bottleBreakSound: []
+  audioScriptGlassBottle: {fileID: 0}
+  typeOfExplosion: {fileID: -1337096409, guid: 757b6043c1330a54586a42c67c840302, type: 3}
 --- !u!50 &254033007128665342
 Rigidbody2D:
   serializedVersion: 4

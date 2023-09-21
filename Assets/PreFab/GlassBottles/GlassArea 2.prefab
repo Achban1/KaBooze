@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5553747265284332106}
   - component: {fileID: 6675298839191488479}
   - component: {fileID: 1486908007439160736}
-  - component: {fileID: 6731285905833435951}
+  - component: {fileID: 4367317684183292460}
   m_Layer: 9
-  m_Name: GlassArea
+  m_Name: GlassArea 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1337096409, guid: 757b6043c1330a54586a42c67c840302, type: 3}
+  m_Sprite: {fileID: -547365120, guid: 757b6043c1330a54586a42c67c840302, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.12, y: 0.32}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioScriptGlassBottle: {fileID: 0}
   health: {fileID: 0}
---- !u!61 &6731285905833435951
+--- !u!61 &4367317684183292460
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,16 +132,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008621484, y: -0.01724276}
+  m_Offset: {x: -0.007358521, y: -0.014716715}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.12, y: 0.32}
-    newSize: {x: 1.12, y: 0.32}
+    oldSize: {x: 0.96, y: 0.44}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.137243, y: 0.30345714}
+  m_Size: {x: 1.092452, y: 0.52830064}
   m_EdgeRadius: 0
