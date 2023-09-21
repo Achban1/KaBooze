@@ -42,6 +42,7 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
         MenuMenu.SetActive(false);
+        
         Paused = false;        
     }
 
