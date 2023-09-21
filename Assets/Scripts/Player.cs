@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
 
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
-            AudioScriptPunchSound.PunchSound();
+           // AudioScriptPunchSound.PunchSound();
             spriteRenderer.color = Color.red;            
             CameraScript.Shake();
             Invoke("BackToWhite", 0.1f);

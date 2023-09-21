@@ -665,6 +665,9 @@ MonoBehaviour:
   bumTimer: 0
   cash: 0
   CoinCounterScript: {fileID: 1977255726}
+  bumPosX: -0.5
+  bumPosY: 0
+  tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &460661298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1717,6 +1720,9 @@ MonoBehaviour:
   bumTimer: 0
   cash: 0
   CoinCounterScript: {fileID: 1977255726}
+  bumPosX: -0.5
+  bumPosY: 0
+  tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1085574827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2339,11 +2345,11 @@ MonoBehaviour:
   - {fileID: 4251287010650561481, guid: 3be8d13ab6b33dd40807a92eed056d10, type: 3}
   - {fileID: 7100329652720917572, guid: abf1160dad9677a4d812cedc827e3ac5, type: 3}
   - {fileID: 3124257012260570473, guid: 8db9cd3dcdde5dc48a93ded6c2a7c0ce, type: 3}
-  - {fileID: 7060381526432868062, guid: 4d06e7c1d14977a439437e9f7c06360f, type: 3}
-  - {fileID: 3311695297154323378, guid: 39305804ec758ab409aa18f2ca77bbcf, type: 3}
-  - {fileID: 3790564856002414929, guid: 80ae5baded543b14da8a7233048ea2c7, type: 3}
-  - {fileID: 1468079649288357808, guid: cbde89cb394165c4fb72506340a12312, type: 3}
-  - {fileID: 4732508632465401692, guid: bf3a87b1a67bdb4478446268064e8c85, type: 3}
+  - {fileID: 3124257012260570473, guid: 3fd82172242c23d46b8612b415d6a7e0, type: 3}
+  - {fileID: 3124257012260570473, guid: 46a6e2ee0291c194981038052ad823b8, type: 3}
+  - {fileID: 7100329652720917572, guid: abf1160dad9677a4d812cedc827e3ac5, type: 3}
+  - {fileID: 3124257012260570473, guid: 46a6e2ee0291c194981038052ad823b8, type: 3}
+  - {fileID: 3124257012260570473, guid: 3fd82172242c23d46b8612b415d6a7e0, type: 3}
   MolotovPrefab: {fileID: 8218120330404435621, guid: 2e0c26344c9c9b547b18b63c1ffbe10d, type: 3}
   playerPos: {fileID: 0}
   Mode: 0
@@ -2915,6 +2921,9 @@ MonoBehaviour:
   bumTimer: 0
   cash: 0
   CoinCounterScript: {fileID: 1977255726}
+  bumPosX: -0.5
+  bumPosY: 0
+  tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1579374762
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3186,7 +3195,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007089235, y: 0.093335815}
+  m_Offset: {x: 0.007089235, y: 0.06459774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4, y: 0}
@@ -3197,7 +3206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.092238665, y: 0.17535423}
+  m_Size: {x: 0.092238665, y: 0.11787807}
   m_EdgeRadius: 0
 --- !u!95 &1734428474
 Animator:
@@ -3643,6 +3652,9 @@ MonoBehaviour:
   bumTimer: 0
   cash: 0
   CoinCounterScript: {fileID: 1977255726}
+  bumPosX: -0.5
+  bumPosY: 0
+  tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1868299204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4170,6 +4182,9 @@ MonoBehaviour:
   bumTimer: 0
   cash: 0
   CoinCounterScript: {fileID: 1977255726}
+  bumPosX: -0.5
+  bumPosY: 0
+  tablePos: {x: 0, y: 0, z: 0}
 --- !u!212 &1959069143
 SpriteRenderer:
   m_ObjectHideFlags: 0

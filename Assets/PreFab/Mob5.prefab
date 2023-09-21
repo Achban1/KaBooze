@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 90
   m_Sprite: {fileID: 666962097, guid: 3219f137add16d14fba05538ded96118, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -178,6 +178,8 @@ MonoBehaviour:
   fall: 0
   animator: {fileID: 2504598326360112497}
   spriteRenderer: {fileID: 6272746032089223023}
+  timer: 0
+  myTable: {x: 0, y: 0, z: 0}
 --- !u!95 &2504598326360112497
 Animator:
   serializedVersion: 5
