@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class TableScript : MonoBehaviour
 {
+    public CoinCounterScript CoinCounterScript;
     public PlayerHealthScript health;
     public GameObject []AngryBum;
+    public AngryBumScript AngryBumScript;
     public float bumCount = 1;
     public float bumTimer;
     public float cash = 0;
-    public CoinCounterScript CoinCounterScript;
     public float bumPosX = -0.5f;
     public float bumPosY = 0;
+    public float tableNr = 0;
+    public float tableBumped = 0;
 
     public Vector3 tablePos = Vector3.zero;
 
@@ -22,7 +25,7 @@ public class TableScript : MonoBehaviour
         CoinCounterScript = GameObject.FindGameObjectWithTag("CoinCounterCanvas").GetComponent<CoinCounterScript>();
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
         cash = 1;
-        tablePos = new Vector3 (transform.position.x, transform.position.y , 0);
+        tablePos = new Vector3 (transform.position.x, transform.position.y , 0);        
     }
 
     // Update is called once per frame
@@ -89,6 +92,8 @@ public class TableScript : MonoBehaviour
         GameObject selectedMob = AngryBum[randomMob];
         GameObject newMob = Instantiate(selectedMob, new Vector3(0, -4.5f, 0), transform.rotation);
         newMob.GetComponent<AngryBumScript>().myTable = tablePos;
+        //Setting tablenumber for bumping Table
+        newMob.GetComponent<AngryBumScript>().tableNr = tableNr;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -106,6 +111,8 @@ public class TableScript : MonoBehaviour
             health.collectedCash = health.collectedCash + cash;
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();
+            //Telling AngryBums that someone stole their tip
+            tableBumped = tableNr;
         }
 
     }
