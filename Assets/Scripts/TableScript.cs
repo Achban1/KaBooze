@@ -36,13 +36,14 @@ public class TableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bumTimer < 5 && bumCount <= 3)
+        if (bumTimer < 10 && bumCount <= 3)
         {
             bumTimer += Time.deltaTime;
         }
         else
         {
             bumCount++;
+            bumTimer = 0;
         }
         //else if (bumCount < 4)
         //{
@@ -145,6 +146,10 @@ public class TableScript : MonoBehaviour
             bumCount = 0;
 
         }
+
+    }
+    public void spamBum()
+    {
 
     }
 
