@@ -30,7 +30,7 @@ public class GameOver : MonoBehaviour
     public void SwitchToGameOver()
     {
         GameOverMenu.SetActive(true);
-        Invoke("quit", 2);
+        Invoke("quit", 0.4f);
         Time.timeScale = 0.2f;
         
 

@@ -9,6 +9,7 @@ public class ToughBardesk : MonoBehaviour
     int coinCount;
     public GameObject VictoryMenu;
     public GameObject VictorySquare;
+    int Win = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +25,11 @@ public class ToughBardesk : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (coinCount >= 50)
+        if (coinCount >= Win - 1)
         {
 
             VictorySquare.SetActive(true);
-            if (coinCount >= 50 && col.gameObject.layer == 8)
+            if (coinCount >= Win - 1 && col.gameObject.layer == 8)
             {
                 
                 SwitchToVictory();
