@@ -143,14 +143,46 @@ public class TableScript : MonoBehaviour
             Debug.Log("CoinCollected");
             CoinCounterScript.CollectCoin();
             //Telling AngryBums that someone stole their tip
-            bumCount = 0;
+            bumCount = 1;
 
         }
 
     }
     public void spamBum()
-    {
-
+    {        
+        switch (bumCount)
+        {
+            case 1:
+                {
+                    randomMob = Random.Range(0, 5);
+                    GameObject selectedMob = AngryBum[randomMob];
+                    GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
+                    break;
+                }
+            case 2:
+                {
+                    randomMob = Random.Range(0, 5);
+                    GameObject selectedMob = AngryBum[randomMob];
+                    GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
+                    randomMob = Random.Range(0, 5);
+                    GameObject selectedMob2 = AngryBum[randomMob];
+                    GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);
+                    break;
+                }
+            case 3:
+                {
+                    randomMob = Random.Range(0, 5);
+                    GameObject selectedMob = AngryBum[randomMob];
+                    GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
+                    randomMob = Random.Range(0, 5);
+                    GameObject selectedMob2 = AngryBum[randomMob];
+                    GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);
+                    randomMob = Random.Range(0, 5);
+                    GameObject selectedMob3 = AngryBum[randomMob];
+                    GameObject newMob3 = Instantiate(selectedMob3, chair3, transform.rotation);
+                    break;
+                }
+        }
     }
 
 }
