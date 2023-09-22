@@ -29,7 +29,7 @@ public class CoinCounterScript : MonoBehaviour
 
     void  UpdateCoinCountUI()
     {
-        coinCountText.text = "Coins: " + coinCount.ToString() + "/100";
+        coinCountText.text = "Coins: " + coinCount.ToString() + "/50";
 
         
     }
