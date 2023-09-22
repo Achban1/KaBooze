@@ -18,7 +18,7 @@ public class ExplosionGlass : MonoBehaviour
         //audioSourcePoolBottles.BottleSoundFX();
         audioSourcePoolExplosion = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolExplosion>();
         audioSourcePoolExplosion.ExplosionSoundFX();
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 2);
         
     }
 

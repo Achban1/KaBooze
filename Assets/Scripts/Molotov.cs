@@ -75,7 +75,7 @@ public class Molotov : MonoBehaviour
         if (Vector2.Distance(transform.position, destination) < 0.1f)
         {           
             Destroy(gameObject);
-            Instantiate(GlassArea, new Vector3(transform.position.x, transform.position.y, 1), Quaternion.identity);
+            Instantiate(GlassArea, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             GameObject newExplosion  = Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             Destroy(newExplosion, 0.4f);
             
