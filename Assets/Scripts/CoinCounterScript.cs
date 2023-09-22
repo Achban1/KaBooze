@@ -19,12 +19,15 @@ public class CoinCounterScript : MonoBehaviour
         audioScriptCoinCollected = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptCoinCollected>();
     }
 
-    public void CollectCoin()
+    public int CollectCoin(int cash)
     {
+        
         Debug.Log("CollectCoinVoid");
-        coinCount++;
+        coinCount += cash;
         audioScriptCoinCollected.CoinCollectSoundFX();
         UpdateCoinCountUI();
+        return coinCount;
+
     }
 
     void  UpdateCoinCountUI()

@@ -10,9 +10,9 @@ public class TableScript : MonoBehaviour
     public GameObject[] AngryBum;
     public AngryBumScript AngryBumScript;
     public Player player;
-    public float bumCount = 1;
+    public int bumCount = 1;
     public float bumTimer;
-    public float cash = 0;
+    public int cash = 0;
     public float ThisTableNr = 0;
     public float tableBumped = 0;
     float stepCat = 0;
@@ -69,27 +69,7 @@ public class TableScript : MonoBehaviour
         //    bumCount++;
         //    bumTimer = 0;
         //}        
-        switch (bumCount)
-        {
-            case 1:
-                {
-                    tablePos = transform.position;
-                    tablePos = chair1;
-                    break;
-                }
-            case 2:
-                {
-                    tablePos = transform.position;
-                    tablePos = chair2;
-                    break;
-                }
-            case 3:
-                {
-                    tablePos = transform.position;
-                    tablePos = chair3;
-                    break;
-                }
-        }
+        
 
         //if (bumCount < 5)
         //{
@@ -113,55 +93,55 @@ public class TableScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Change to playerLayer
-        if (collision.gameObject.layer == 3) //&& bumCount < 2) 
-        {            
-            Debug.Log("CoinCollected");
-            CoinCounterScript.CollectCoin();
-        }
+        //if (collision.gameObject.layer == 3) //&& bumCount < 2) 
+        //{            
+        //    Debug.Log("CoinCollected");
+        //    CoinCounterScript.CollectCoin();
+        //}
         if (collision.gameObject.layer == 3 && bumCount != 0)
         {
-            switch (bumCount)
+            if (bumCount == 1)
             {
-                case 1:
-                {
-                    randomMob = Random.Range(0, 5);
-                    GameObject selectedMob = AngryBum[randomMob];
-                    GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
-                    break;
-                }
-                case 2:
-                {
-                    randomMob = Random.Range(0, 5);
-                    GameObject selectedMob = AngryBum[randomMob];
-                    GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
-                    randomMob = Random.Range(0, 5);
-                    GameObject selectedMob2 = AngryBum[randomMob];
-                    GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);
-                    break;
-                }
-                case 3:
-                {
-                    randomMob = Random.Range(0, 5);
-                    GameObject selectedMob = AngryBum[randomMob];
-                    GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
-                    randomMob = Random.Range(0, 5);
-                    GameObject selectedMob2 = AngryBum[randomMob];
-                    GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);
-                    randomMob = Random.Range(0, 5);
-                    GameObject selectedMob3 = AngryBum[randomMob];
-                    GameObject newMob3 = Instantiate(selectedMob3, chair3, transform.rotation);
-                    break;
-                }
+                cash = 1;
+                randomMob = Random.Range(0, 5);
+                GameObject selectedMob = AngryBum[randomMob];
+                GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
+                    
             }
+            else if (bumCount == 2)     
+            {
+                cash = 3;
+                randomMob = Random.Range(0, 5);
+                GameObject selectedMob = AngryBum[randomMob];
+                GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
+                randomMob = Random.Range(0, 5);
+                GameObject selectedMob2 = AngryBum[randomMob];
+                GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);                    
+            }
+            else if(bumCount >= 3)
+            {
+                cash = 5;
+                randomMob = Random.Range(0, 5);
+                GameObject selectedMob = AngryBum[randomMob];
+                GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
+                randomMob = Random.Range(0, 5);
+                GameObject selectedMob2 = AngryBum[randomMob];
+                GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);
+                randomMob = Random.Range(0, 5);
+                GameObject selectedMob3 = AngryBum[randomMob];
+                GameObject newMob3 = Instantiate(selectedMob3, chair3, transform.rotation);                    
+            }
+            
             //
             //GameObject selectedMob = AngryBum[randomMob];
             //GameObject newMob = Instantiate(selectedMob, tablePos, transform.rotation);
             //tableBumped = ThisTableNr;
             health.collectedCash = health.collectedCash + cash;
             Debug.Log("CoinCollected");
-            CoinCounterScript.CollectCoin();
+            CoinCounterScript.CollectCoin(cash);
             //Telling AngryBums that someone stole their tip
-            bumCount = 1;
+            bumCount = 0;
+            cash = 0;
 
         }
 
