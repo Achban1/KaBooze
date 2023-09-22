@@ -24,11 +24,11 @@ public class ToughBardesk : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (coinCount >= 10)
+        if (coinCount >= 100)
         {
 
             VictorySquare.SetActive(true);
-            if (coinCount >= 10 && col.gameObject.layer == 8)
+            if (coinCount >= 100 && col.gameObject.layer == 8)
             {
                 
                 SwitchToVictory();
