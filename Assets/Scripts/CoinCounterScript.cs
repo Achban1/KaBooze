@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
+//using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class CoinCounterScript : MonoBehaviour
 {
