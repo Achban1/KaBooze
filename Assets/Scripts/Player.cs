@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject == Cat)
         {
-            Instantiate(BigCat, new Vector3(1,4.2f,0), Quaternion.identity);            
+            Instantiate(BigCat, new Vector3(-2,1,0), Quaternion.identity);            
             CatRender.color = new Color(0, 0, 0, 0);
             catSounds.CatSoundFX();
             StepOnCat++;
