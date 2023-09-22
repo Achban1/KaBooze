@@ -8017,6 +8017,8 @@ MonoBehaviour:
   playerIsAlive: 1
   heroSpeed: 5
   dyingPlayer: {fileID: 1189631224469876272, guid: 3af746249ebf8104881b5fa4f885991a, type: 3}
+  Cat: {fileID: 1952765472}
+  BigCat: {fileID: 6497502498033039954, guid: 933c3951452307742a8e4eca445ebc58, type: 3}
 --- !u!212 &1734428471
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9789,8 +9791,8 @@ Transform:
   m_GameObject: {fileID: 2006928954}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5822, y: 0.36, z: 9.936949}
-  m_LocalScale: {x: 7.107012, y: 1, z: 1}
+  m_LocalPosition: {x: 0.6, y: 0.78, z: 9.936949}
+  m_LocalScale: {x: 1.5841444, y: 1.3433338, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 288126298}
@@ -9837,7 +9839,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.016606808, a: 1}
+  m_Color: {r: 0.38115576, g: 0.8301887, b: 0.38819942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
