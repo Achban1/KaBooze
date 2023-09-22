@@ -40,20 +40,20 @@ public class TableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //stepCat = player.StepOnCat;
-        //if (stepCat == 1 && oneTime == 0)
-        //{
-        //    randomMob = Random.Range(0, 5);
-        //    GameObject selectedMob = AngryBum[randomMob];
-        //    GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
-        //    randomMob = Random.Range(0, 5);
-        //    GameObject selectedMob2 = AngryBum[randomMob];
-        //    GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);
-        //    randomMob = Random.Range(0, 5);
-        //    GameObject selectedMob3 = AngryBum[randomMob];
-        //    GameObject newMob3 = Instantiate(selectedMob3, chair3, transform.rotation);
-        //    oneTime = 1;
-        //}
+        stepCat = player.StepOnCat;
+        if (stepCat == 1 && oneTime == 0)
+        {
+            randomMob = Random.Range(0, 5);
+            GameObject selectedMob = AngryBum[randomMob];
+            GameObject newMob = Instantiate(selectedMob, chair1, transform.rotation);
+            randomMob = Random.Range(0, 5);
+            GameObject selectedMob2 = AngryBum[randomMob];
+            GameObject newMob2 = Instantiate(selectedMob2, chair2, transform.rotation);
+            randomMob = Random.Range(0, 5);
+            GameObject selectedMob3 = AngryBum[randomMob];
+            GameObject newMob3 = Instantiate(selectedMob3, chair3, transform.rotation);
+            oneTime = 1;
+        }
         if (bumTimer < 10 && bumCount <= 3)
         {
             bumTimer += Time.deltaTime;

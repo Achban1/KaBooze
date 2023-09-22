@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public GameObject BigCat;
     private SpriteRenderer CatRender;
     public CatSounds catSounds;
+    public float StepOnCat = 0;
 
     Vector2 rawInput;
     Vector3 velocity;
@@ -111,6 +112,7 @@ public class Player : MonoBehaviour
             Instantiate(BigCat, new Vector3(1,4.2f,0), Quaternion.identity);            
             CatRender.color = new Color(0, 0, 0, 0);
             catSounds.CatSoundFX();
+            StepOnCat++;
         }
 
     }
