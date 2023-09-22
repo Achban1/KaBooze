@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public Player dead;
+    private Player dead;
     private bool gameOver;
     public GameObject GameOverMenu;
     // Start is called before the first frame update

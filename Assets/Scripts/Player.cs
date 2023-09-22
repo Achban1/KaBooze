@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public GameObject dyingPlayer;  
     public GameObject Cat;
     public GameObject BigCat;
+    private SpriteRenderer CatRender;
+
     Vector2 rawInput;
     Vector3 velocity;
 
@@ -30,7 +32,10 @@ public class Player : MonoBehaviour
         CameraScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
         AudioScriptPunchSound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptPunchSound>();
         audioScriptPlayerDeathSound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptPlayerDeathSound>();
+        CatRender = Cat.GetComponent<SpriteRenderer>();
         
+
+
     }
 
     // Update is called once per frame
@@ -101,7 +106,8 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject == Cat)
         {
-            Instantiate(BigCat, new Vector3(0,-1,0), Quaternion.identity);
+            Instantiate(BigCat, new Vector3(1,4.2f,0), Quaternion.identity);
+            CatRender.color = new Color(0, 0, 0, 0);
         }
 
     }
