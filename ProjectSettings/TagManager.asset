@@ -10,6 +10,7 @@ TagManager:
   - Bum
   - Bartender
   - CoinCounterCanvas
+  - Cats
   layers:
   - Default
   - TransparentFX
