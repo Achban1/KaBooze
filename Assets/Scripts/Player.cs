@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private SpriteRenderer CatRender;
     public CatSounds catSounds;
     public float StepOnCat = 0;
+    float oneTime = 0;
 
     Vector2 rawInput;
     Vector3 velocity;
@@ -107,12 +108,13 @@ public class Player : MonoBehaviour
             Invoke("BackToWhite", 0.1f);
         }
 
-        if (collision.gameObject == Cat)
+        if (collision.gameObject == Cat && oneTime == 0)
         {
             Instantiate(BigCat, new Vector3(-2,1,0), Quaternion.identity);            
             CatRender.color = new Color(0, 0, 0, 0);
             catSounds.CatSoundFX();
             StepOnCat++;
+            oneTime = 1;
         }
 
     }
