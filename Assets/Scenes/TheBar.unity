@@ -8144,7 +8144,9 @@ MonoBehaviour:
   heroSpeed: 5
   dyingPlayer: {fileID: 1189631224469876272, guid: 3af746249ebf8104881b5fa4f885991a, type: 3}
   Cat: {fileID: 1952765472}
-  BigCat: {fileID: 3633763637606073149, guid: bcacb6657fc953948ae745a29aefc4b8, type: 3}
+  BigCat: {fileID: 3535756828700797134, guid: 46c81b22e9c101b4cb21b9d20bc8caaa, type: 3}
+  catSounds: {fileID: 0}
+  StepOnCat: 0
 --- !u!212 &1734428471
 SpriteRenderer:
   m_ObjectHideFlags: 0
