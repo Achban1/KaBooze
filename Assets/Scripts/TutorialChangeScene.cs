@@ -16,10 +16,10 @@ public class TutorialChangeScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SwitchToMainMenuScene();
+            SwitchToTheBarScene();
         }
     }
-    private void SwitchToMainMenuScene()
+    private void SwitchToTheBarScene()
     {
      
         SceneManager.LoadScene("TheBar");
