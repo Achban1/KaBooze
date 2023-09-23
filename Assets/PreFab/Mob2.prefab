@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableScript: {fileID: 0}
-  speed: 2
+  speed: 3
   movingX: 0
   movingY: 0
   fall: 0
