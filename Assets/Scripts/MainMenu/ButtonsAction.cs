@@ -21,4 +21,18 @@ public class ButtonsAction : MonoBehaviour
 #endif
         Application.Quit();
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SwitchToTheBarScene();
+        }
+
+    }
+    private void SwitchToTheBarScene()
+    {
+
+        SceneManager.LoadScene("TheBar");
+    }
 }
