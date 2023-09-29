@@ -16,6 +16,8 @@ public class bartenderThrow : MonoBehaviour
     float ti;
     float fast;
     private Animator anim;
+
+    public AudioScriptPlayOnAwake audioScript;
     
     // Start is called before the first frame update
     void Start()

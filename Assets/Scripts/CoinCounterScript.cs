@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class CoinCounterScript : MonoBehaviour
 {
-    public AudioScriptCoinCollected audioScriptCoinCollected;
+    public AudioScriptPlay audioScriptPlay;
     public TextMeshProUGUI coinCountText;
     public int coinCount;
     [SerializeField] CoinText coinText;
@@ -16,7 +16,7 @@ public class CoinCounterScript : MonoBehaviour
     {
         coinCount = 0;
         UpdateCoinCountUI();
-        audioScriptCoinCollected = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptCoinCollected>();
+        audioScriptPlay = GameObject.FindGameObjectWithTag("CoinPickUpAudio").GetComponent<AudioScriptPlay>();
     }
 
     public int CollectCoin(int cash)
@@ -24,7 +24,7 @@ public class CoinCounterScript : MonoBehaviour
         
         Debug.Log("CollectCoinVoid");
         coinCount += cash;
-        audioScriptCoinCollected.CoinCollectSoundFX();
+        audioScriptPlay.PlayAuido();
         UpdateCoinCountUI();
         return coinCount;
 

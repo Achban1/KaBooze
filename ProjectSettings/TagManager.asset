@@ -11,6 +11,14 @@ TagManager:
   - Bartender
   - CoinCounterCanvas
   - Cats
+  - Audio
+  - BartenderAudio
+  - BottlesAudio
+  - Explosions
+  - PlayerDeathAudio
+  - PunchAudio
+  - CoinPickUpAudio
+  - CatAudio
   layers:
   - Default
   - TransparentFX

@@ -19,8 +19,7 @@ public class Molotov : MonoBehaviour
     public bartenderThrow Mode;
     private float rotationSpeed;
 
-    public AudioSourcePoolBottles audioSourcePoolBottles;
-    public AudioSourcePoolExplosion audioSourcePoolExplosion;
+    public AudioScriptPlay audioScriptPlay;
 
     public Sprite typeOfExplosion;
 
@@ -30,10 +29,9 @@ public class Molotov : MonoBehaviour
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rb20 = GetComponent<Rigidbody2D>();
         Mode = GameObject.FindGameObjectWithTag("Bartender").GetComponent<bartenderThrow>();
-
-        audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
-        audioSourcePoolExplosion = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolExplosion>();
-
+       
+        audioScriptPlay = GameObject.FindGameObjectWithTag("BottlesAudio").GetComponent<AudioScriptPlay>();
+        
 
 
 
@@ -102,11 +100,8 @@ public class Molotov : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player") || col.gameObject.layer == 7 || col.gameObject.layer == 6)
-        {
-
-
-            audioSourcePoolBottles.BottleSoundFX();
-            //audioSourcePoolExplosion.ExplosionSoundFX();
+        {           
+            audioScriptPlay.PlayAuido();
             Destroy(gameObject);
             
         }

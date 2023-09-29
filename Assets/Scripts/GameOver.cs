@@ -23,7 +23,7 @@ public class GameOver : MonoBehaviour
         if (gameOver == false)
         {
             SwitchToGameOver();
-            Debug.Log("Game Over!");
+           
         }
     }
 

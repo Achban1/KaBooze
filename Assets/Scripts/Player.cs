@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public CameraScript CameraScript;
     public Animator animator;
-    public AudioScriptPunchSound AudioScriptPunchSound;
-    public AudioScriptPlayerDeathSound audioScriptPlayerDeathSound;
+    public AudioScriptPunchSound audioScriptPunchSound;
+    //public AudioScriptPlayerDeathSound audioScriptPlayerDeathSound;
     public bool playerIsAlive = true;
     public float heroSpeed = 5f;
     public GameObject dyingPlayer;  
@@ -24,6 +24,9 @@ public class Player : MonoBehaviour
     public float StepOnCat = 0;
     float oneTime = 0;
 
+    public AudioScriptPlay audioScriptPlayPlayerDeath, audioScriptPlayPunch, catAudio;
+    //public AudioScriptPlay audioScriptPlayPunch;
+
     Vector2 rawInput;
     Vector3 velocity;
 
@@ -33,11 +36,13 @@ public class Player : MonoBehaviour
     {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
         CameraScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
-        AudioScriptPunchSound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptPunchSound>();
-        audioScriptPlayerDeathSound = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioScriptPlayerDeathSound>();
+        
         catSounds = GameObject.FindGameObjectWithTag("Cats").GetComponent<CatSounds>();
         CatRender = Cat.GetComponent<SpriteRenderer>();
-        
+
+        audioScriptPlayPunch = GameObject.FindGameObjectWithTag("PunchAudio").GetComponent<AudioScriptPlay>();
+        audioScriptPlayPlayerDeath = GameObject.FindGameObjectWithTag("PlayerDeathAudio").GetComponent<AudioScriptPlay>();
+        catAudio = GameObject.FindGameObjectWithTag("CatAudio").GetComponent<AudioScriptPlay>();
 
 
     }
@@ -78,9 +83,10 @@ public class Player : MonoBehaviour
             transform.position += velocity;
         }     
 
-        if (health._currentHealth <= 0 && playerIsAlive)
+        if (health.currentHealth <= 0 && playerIsAlive)
         {
-            audioScriptPlayerDeathSound.PlayerDeathSoundFX();
+            //audioScriptPlayerDeathSound.PlayerDeathSoundFX();
+            audioScriptPlayPlayerDeath.PlayAuido();
             playerIsAlive = false;
             Debug.Log("You dead");
             animator.SetBool("alive", false);            
@@ -94,7 +100,7 @@ public class Player : MonoBehaviour
 
             Debug.Log("Damage Taken");
             health.PlayerDamage(5);
-            AudioScriptPunchSound.PunchSound();
+            audioScriptPlayPunch.PlayAuido();
             spriteRenderer.color = Color.red;            
             CameraScript.Shake();
             Invoke("BackToWhite", 0.1f);
@@ -112,7 +118,7 @@ public class Player : MonoBehaviour
         {
             Instantiate(BigCat, new Vector3(-2,1,0), Quaternion.identity);            
             CatRender.color = new Color(0, 0, 0, 0);
-            catSounds.CatSoundFX();
+            catAudio.PlayAuido();
             StepOnCat++;
             oneTime = 1;
         }

@@ -5,19 +5,15 @@ using UnityEngine;
 
 public class ExplosionGlass : MonoBehaviour
 {
-
-    public AudioSourcePoolBottles audioSourcePoolBottles;
-    public AudioSourcePoolExplosion audioSourcePoolExplosion;
+    public AudioScriptPlay audioScriptPlay;
 
     public PlayerHealthScript health;
 
     // Start is called before the first frame update
     void Start()
-    {
-        //audioSourcePoolBottles = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolBottles>();
-        //audioSourcePoolBottles.BottleSoundFX();
-        audioSourcePoolExplosion = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSourcePoolExplosion>();
-        audioSourcePoolExplosion.ExplosionSoundFX();
+    {       
+        audioScriptPlay = GameObject.FindGameObjectWithTag("Explosions").GetComponent<AudioScriptPlay>();
+        audioScriptPlay.PlayAuido();
         Destroy(gameObject, 2);
         
     }
