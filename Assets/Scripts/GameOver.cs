@@ -5,21 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    private Player dead;
+    private Player playerIsDead;
     private bool gameOver;
     public GameObject GameOverMenu;
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        dead = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        
+        playerIsDead = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        gameOver = dead.playerIsAlive;
+        gameOver = playerIsDead.playerIsAlive;
         if (gameOver == false)
         {
             SwitchToGameOver();
@@ -30,12 +29,10 @@ public class GameOver : MonoBehaviour
     public void SwitchToGameOver()
     {
         GameOverMenu.SetActive(true);
-        Invoke("quit", 0.4f);
+        Invoke(nameof(Quit), 0.4f);
         Time.timeScale = 0.2f;
-        
-
     }
-    private void quit()
+    private void Quit()
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;

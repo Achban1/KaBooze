@@ -10,13 +10,13 @@ public class ToughBardesk : MonoBehaviour
     public GameObject VictoryMenu;
     public GameObject VictorySquare;
     int Win = 30;
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         coin = GameObject.FindGameObjectWithTag("CoinCounterCanvas").GetComponent<CoinCounterScript>();
@@ -27,11 +27,9 @@ public class ToughBardesk : MonoBehaviour
     {
         if (coinCount >= Win - 1)
         {
-
             VictorySquare.SetActive(true);
             if (coinCount >= Win - 1 && col.gameObject.layer == 8)
             {
-                
                 SwitchToVictory();
             }
             
@@ -42,12 +40,12 @@ public class ToughBardesk : MonoBehaviour
     {
         VictoryMenu.SetActive(true);
         
-        Invoke("quit", 1);
+        Invoke(nameof(Quit), 1);
         Time.timeScale = 0.1f;
 
 
     }
-    private void quit()
+    private void Quit()
     {
         SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
