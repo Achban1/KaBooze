@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2137680920465007332}
   - component: {fileID: 2181275760075126405}
   - component: {fileID: 9014728857693972519}
-  - component: {fileID: -759386303586504518}
   m_Layer: 0
   m_Name: kabooze_explotion1_0
   m_TagString: Untagged
@@ -107,15 +106,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-759386303586504518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7186573183297292984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fbd189f24374d74987ae5c03df9ec2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

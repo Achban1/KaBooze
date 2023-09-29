@@ -5,31 +5,29 @@ using UnityEngine;
 
 public class ExplosionGlass : MonoBehaviour
 {
+
     public AudioScriptPlay audioScriptPlay;
+
 
     public PlayerHealthScript health;
 
-    // Start is called before the first frame update
     void Start()
+
     {       
         audioScriptPlay = GameObject.FindGameObjectWithTag("Explosions").GetComponent<AudioScriptPlay>();
         audioScriptPlay.PlayAuido();
         Destroy(gameObject, 2);
-        
+   
+       
     }
 
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D trig)
+    private void OnTriggerEnter2D(Collider2D col)
     {
 
-        if (trig.gameObject.tag == "Player")
+        if (col.gameObject.CompareTag("Player"))
         {
             health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthScript>();
             health.PlayerDamage(6);
-            
         }
-        
-
-
     }
 }
