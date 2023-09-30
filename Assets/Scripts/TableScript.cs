@@ -37,7 +37,8 @@ public class TableScript : MonoBehaviour
             {
                 randomMob = Random.Range(0, 5);
                 GameObject selectedMob = AngryBum[randomMob];
-                GameObject newMob = Instantiate(selectedMob, this.transform.GetChild(i).transform.position, transform.rotation);
+                GameObject newMob = Instantiate(selectedMob, this.transform.GetChild(i).transform.position, 
+                    transform.rotation);
             }            
             oneTime = 1;
         }
@@ -69,7 +70,8 @@ public class TableScript : MonoBehaviour
             {
                 randomMob = Random.Range(0, 5);
                 GameObject selectedMob = AngryBum[randomMob];
-                GameObject newMob = Instantiate(selectedMob, this.transform.GetChild(i).transform.position, transform.rotation);                
+                GameObject newMob = Instantiate(selectedMob, this.transform.GetChild(i).transform.position, 
+                    transform.rotation);                
             }                        
             bumCount = 0;                 
         }
